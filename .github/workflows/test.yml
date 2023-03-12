@@ -13,7 +13,7 @@
 # Requires scripts:
 # - bin/test
 
-name: <track> / Test
+name: GDScript / Test
 
 on:
   push:
@@ -23,17 +23,22 @@ on:
 
 jobs:
   ci:
-    runs-on: <image-name>
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Use <setup tooling>
-        uses: <action to setup tooling>
+      - name: Use Godot 3.5.1 headless
+        uses: vitorgus/setup-godot@v1
+        with:
+          godot-version: 3.5.1
+          download-templates: false
 
-      - name: Install project dependencies
-        run: <install dependencies>
+      #- name: Install project dependencies
+        #run: <install dependencies>
+        # TODO: download Godot Unit Test?
 
       - name: Verify all exercises
-        run: bin/verify-exercises
+        run: godot -s ./exercises/practice/hello-world/hello_world_test.gd
+        # TODO: detect all exercises
