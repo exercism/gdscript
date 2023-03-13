@@ -26,6 +26,37 @@
     "practice": []
   },
   "concepts": [],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "Strong, dynamic typing",
+      "content": "Gdscript is strong and dynamically typed and supports gradual typing.",
+      "icon": "dynamically-typed"
+    },
+    {
+      "title": "Cross platform",
+      "content": "Gdscript code can run on Windows, Linux, macOS, iOS, Android, and the web.",
+      "icon": "cross-platform"
+    },
+    {
+      "title": "C++ bindings",
+      "content": "C++ bindings allows for fast, low-level access to the engine's features.",
+      "icon": "fast"
+    },
+    {
+      "title": "Specialized types for game development",
+      "content": "Specialized types for increased productivity and performance, when working with 2D and 3D games.",
+      "icon": "powerful"
+    },
+    {
+      "title": "Garbage collection",
+      "content": "Garbage collection is automatic and seamless, freeing you from manual memory management.",
+      "icon": "garbage-collected"
+    },
+    {
+      "title": "Threading support",
+      "content": "Gdscript has built-in support for multithreading, allowing you to take advantage of multiple CPU cores.",
+      "icon": "concurrency"
+    }
+  ],
   "tags": []
 }
