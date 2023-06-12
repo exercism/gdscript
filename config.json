@@ -38,9 +38,9 @@
       "icon": "cross-platform"
     },
     {
-      "title": "C++ bindings",
-      "content": "C++ bindings allows for fast, low-level access to the engine's features.",
-      "icon": "fast"
+        "title": "Tightly coupled",
+        "content": "GDScript has a deep integration within the Godot game engine: no installation required to use it, it just works. There's even a script editor inside the software.",
+        "icon": "embeddable"
     },
     {
       "title": "Specialized types for game development",
@@ -48,8 +48,8 @@
       "icon": "powerful"
     },
     {
-      "title": "Garbage collection",
-      "content": "Garbage collection is automatic and seamless, freeing you from manual memory management.",
+      "title": "No garbage collection",
+      "content": "Garbage collection can cause random freezes during gameplay. Godot (and thus GDScript) instead use reference counting, freeing you from manual memory management.",
       "icon": "garbage-collected"
     },
     {
