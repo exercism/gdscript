@@ -34,7 +34,7 @@
     },
     {
       "title": "Cross platform",
-      "content": "Gdscript code can run on Windows, Linux, macOS, iOS, Android, and the web.",
+      "content": "GDScript code can run wherever Godot runs, either on Windows, Linux, macOS, iOS, Android, the web and even consoles.",
       "icon": "cross-platform"
     },
     {
