@@ -23,7 +23,16 @@
   },
   "exercises": {
     "concept": [],
-    "practice": []
+    "practice": [
+      {
+        "uuid": "e1f3aab9-ca32-4f6f-b266-d05d82c94535",
+        "slug": "two-fer",
+        "name": "Two Fer",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      }
+    ]
   },
   "concepts": [],
   "key_features": [],
