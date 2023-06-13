@@ -16,10 +16,10 @@
     "highlightjs_language": "gdscript"
   },
   "files": {
-    "solution": [],
-    "test": [],
-    "example": [],
-    "exemplar": []
+    "solution": ["%{snake_slug}.gd"],
+    "test": ["%{snake_slug}_test.gd"],
+    "example": [".meta/example.gd"],
+    "exemplar": [".meta/exemplar.gd"]
   },
   "exercises": {
     "concept": [],
