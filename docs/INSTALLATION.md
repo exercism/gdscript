@@ -1,6 +1,6 @@
 # Installation
 
-Gdscript is a domain specific language and can thereby requires the godot game engine to be installed.
+GDScript is a domain specific language and can thereby requires the godot game engine to be installed.
 
 ## General
 
