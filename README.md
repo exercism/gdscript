@@ -1,6 +1,6 @@
 # Exercism GDScript Track
 
-[![configlet](https://github[![Configlet](https://github.com/exercism/gdscript/actions/workflows/configlet.yml/badge.svg)](https://github.com/exercism/gdscript/actions/workflows/configlet.yml) [![Tests](https://github.com/exercism/gdscript/actions/workflows/test.yml/badge.svg)](https://github.com/exercism/gdscript/actions/workflows/test.yml)
+[![Configlet](https://github.com/exercism/gdscript/actions/workflows/configlet.yml/badge.svg)](https://github.com/exercism/gdscript/actions/workflows/configlet.yml) [![.github/workflows/test.yml](https://github.com/exercism/gdscript/actions/workflows/test.yml/badge.svg)](https://github.com/exercism/gdscript/actions/workflows/test.yml)
 
 Exercism exercises in GDScript.
 
