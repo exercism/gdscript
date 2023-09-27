@@ -8,7 +8,7 @@
     "representer": false,
     "analyzer": false
   },
-  "blurb": "TODO: add blurb",
+  "blurb": "GDScript is a versatile scripting language seamlessly integrated into the cross-platform open-source Godot 2D/3D game engine.",
   "version": 3,
   "online_editor": {
     "indent_style": "space",
