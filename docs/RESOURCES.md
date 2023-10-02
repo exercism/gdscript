@@ -1,5 +1,6 @@
 # Resources
 
+* [Official Godot Homepage](https://godotengine.org/)
 * [Godot Engine - Q&A](https://ask.godotengine.org/)
 * [Godot Engine Discord](https://discord.com/invite/4JBkykG)
 * [r/godot on Reddit](https://www.reddit.com/r/godot/)
