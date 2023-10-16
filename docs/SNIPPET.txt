@@ -1,2 +1,2 @@
 func hello(name):
-  return "Hello, %s!" % name
+	return "Hello, %s!" % name
