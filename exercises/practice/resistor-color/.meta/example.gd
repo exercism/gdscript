@@ -9,6 +9,7 @@ const COLORS = ["black",
                 "grey",
                 "white"]
 
+
 func color_code(color):
     return COLORS.find(color)
 
