@@ -18,9 +18,9 @@ run_test() {
     # Check status
     test_status="$(jq -r '.status' $temp_dir/results.json)"
     if [ "$test_status" != "pass" ]; then
-    	echo "Tests for $slug have failed:"
-    	cat $temp_dir/results.json
-    	exit 1
+        echo "Tests for $slug have failed:"
+        cat $temp_dir/results.json
+        exit 1
     fi
 }
 

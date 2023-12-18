@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
 
       - name: Setup gdtoolkit
-        uses: Scony/godot-gdscript-toolkit@09af1747fd66629af601b1f14d1ac24203358686
+        uses: Scony/godot-gdscript-toolkit@af9a6e36935fe7319aa559ca068ef8f2392d99c3
 
       - name: Lint
         run: gdlint exercises
