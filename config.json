@@ -36,6 +36,14 @@
         "difficulty": 1
       },
       {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "c15ce044-1a62-45eb-86a2-079554cbd2c2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "uuid": "c3b37c54-cc4e-49a5-a869-cd7700b0e448",
         "slug": "leap",
         "name": "Leap",
