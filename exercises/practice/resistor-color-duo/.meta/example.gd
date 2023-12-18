@@ -9,6 +9,7 @@ const COLORS = ["black",
                 "grey",
                 "white"]
 
+
 func color_code(colors):
     var tens = colors[0]
     var ones = colors[1]
