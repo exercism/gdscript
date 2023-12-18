@@ -12,5 +12,6 @@ const COLORS = ["black",
 func color_code(color):
     return COLORS.find(color)
 
+
 func colors():
     return COLORS
