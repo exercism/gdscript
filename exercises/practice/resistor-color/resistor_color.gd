@@ -1,6 +1,6 @@
 func color_code(color):
-    pass
+	pass
 
 
 func colors():
-    pass
+	pass
