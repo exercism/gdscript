@@ -20,11 +20,8 @@ comparison-with-itself: null
 constant-name: _?[A-Z][A-Z0-9]*(_[A-Z0-9]+)*
 disable: [
   unused-argument,
-<<<<<<< HEAD
   max-line-length,
-=======
   max-public-methods,
->>>>>>> Add triangle exercise
 ]
 duplicated-load: null
 enum-element-name: '[A-Z][A-Z0-9]*(_[A-Z0-9]+)*'
