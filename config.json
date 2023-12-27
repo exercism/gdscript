@@ -60,6 +60,14 @@
         "difficulty": 2
       },
       {
+        "slug": "triangle",
+        "name": "triangle",
+        "uuid": "9762dd20-acef-4e3e-b304-8ae2a351d866",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "pangram",
         "name": "Pangram",
         "uuid": "385f681c-2b7d-4f32-9662-74b7aaac172b",

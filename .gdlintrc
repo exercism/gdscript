@@ -21,6 +21,7 @@ constant-name: _?[A-Z][A-Z0-9]*(_[A-Z0-9]+)*
 disable: [
   unused-argument,
   max-line-length,
+  max-public-methods,
 ]
 duplicated-load: null
 enum-element-name: '[A-Z][A-Z0-9]*(_[A-Z0-9]+)*'
