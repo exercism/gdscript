@@ -97,8 +97,7 @@
   "key_features": [],
   "tags": [
     "paradigm/object_oriented",
-    "typing/static",
-    "typing/dynamic",
+    "typing/gradual",
     "execution_mode/interpreted",
     "platform/windows",
     "platform/mac",
