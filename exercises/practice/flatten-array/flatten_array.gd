@@ -1,0 +1,2 @@
+func flatten(iterable):
+    pass
