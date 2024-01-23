@@ -122,6 +122,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
+      },
+      {
+        "slug": "luhn",
+        "name": "Luhn",
+        "uuid": "8f7a50ef-60fc-4e72-99de-c5dcf6ae2577",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
