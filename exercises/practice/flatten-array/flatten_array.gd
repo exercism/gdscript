@@ -1,2 +1,2 @@
 func flatten(iterable):
-    pass
+	pass
