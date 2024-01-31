@@ -130,6 +130,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "pop-count",
+        "name": "Eliud's Eggs",
+        "uuid": "3a40dd65-7b56-4e0f-aed6-0e0a28753ca9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
