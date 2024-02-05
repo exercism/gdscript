@@ -4,10 +4,10 @@
   ],
   "files": {
     "solution": [
-      "pop_count.gd"
+      "eliuds_eggs.gd"
     ],
     "test": [
-      "pop_count_test.gd"
+      "eliuds_eggs_test.gd"
     ],
     "example": [
       ".meta/example.gd"
