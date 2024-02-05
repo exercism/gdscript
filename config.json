@@ -132,6 +132,14 @@
         "difficulty": 2
       },
       {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "cce06bc1-255a-4a7b-a3e2-7d5e3d2445f3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "8f7a50ef-60fc-4e72-99de-c5dcf6ae2577",
