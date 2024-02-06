@@ -124,6 +124,14 @@
         "difficulty": 2
       },
       {
+        "uuid": "9a52fffc-2672-41fb-b3ea-bef9c801726d",
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "8f7a50ef-60fc-4e72-99de-c5dcf6ae2577",
