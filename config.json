@@ -154,6 +154,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "robot-simulator",
+        "name": "Robot Simulator",
+        "uuid": "31a8cb4a-c211-4daa-a14b-7347fed015a6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
