@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "pfertyk"
+  ],
+  "files": {
+    "solution": [
+      "scale_generator.gd"
+    ],
+    "test": [
+      "scale_generator_test.gd"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Generate musical scales, given a starting note and a set of intervals."
+}
