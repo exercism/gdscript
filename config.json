@@ -195,17 +195,17 @@
     },
     {
       "title": "Tightly coupled",
-      "content": "GDScript has a deep integration within the Godot game engine: no installation required to use it, it just works.",
+      "content": "GDScript has a deep integration within the Godot game engine: no installation required to use it.",
       "icon": "embeddable"
     },
     {
-      "title": "Types for game development",
+      "title": "Types for gamedev",
       "content": "Specialized types for increased productivity and performance, when working with 2D and 3D games.",
       "icon": "powerful"
     },
     {
       "title": "No garbage collection",
-      "content": "Garbage collection can cause random freezes during gameplay. Godot (and thus GDScript) instead uses reference counting.",
+      "content": "Garbage collection can cause random freezes during gameplay. Godot instead uses reference counting.",
       "icon": "garbage-collected"
     },
     {
