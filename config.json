@@ -190,27 +190,27 @@
     },
     {
       "title": "Cross platform",
-      "content": "GDScript code can run wherever Godot runs, either on Windows, Linux, macOS, iOS, Android, the web and even consoles.",
+      "content": "GDScript code can run wherever Godot runs, either on desktop, mobile, the web and even consoles.",
       "icon": "cross-platform"
     },
     {
-        "title": "Tightly coupled",
-        "content": "GDScript has a deep integration within the Godot game engine: no installation required to use it, it just works. There's even a script editor inside the software.",
-        "icon": "embeddable"
+      "title": "Tightly coupled",
+      "content": "GDScript has a deep integration within the Godot game engine: no installation required to use it, it just works.",
+      "icon": "embeddable"
     },
     {
-      "title": "Specialized types for game development",
+      "title": "Types for game development",
       "content": "Specialized types for increased productivity and performance, when working with 2D and 3D games.",
       "icon": "powerful"
     },
     {
       "title": "No garbage collection",
-      "content": "Garbage collection can cause random freezes during gameplay. Godot (and thus GDScript) instead uses reference counting, freeing you from manual memory management.",
+      "content": "Garbage collection can cause random freezes during gameplay. Godot (and thus GDScript) instead uses reference counting.",
       "icon": "garbage-collected"
     },
     {
       "title": "Threading support",
-      "content": "GDScript has built-in support for multithreading, allowing you to take advantage of multiple CPU cores.",
+      "content": "GDScript has support for multithreading, allowing you to take advantage of multiple CPU cores.",
       "icon": "concurrency"
     }
   ],
