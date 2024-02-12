@@ -29,7 +29,7 @@
   "key_features": [
     {
       "title": "Strong, dynamic typing",
-      "content": "Gdscript is strong and dynamically typed and supports gradual typing.",
+      "content": "GDScript is strong and dynamically typed and supports gradual typing.",
       "icon": "dynamically-typed"
     },
     {
@@ -49,12 +49,12 @@
     },
     {
       "title": "No garbage collection",
-      "content": "Garbage collection can cause random freezes during gameplay. Godot (and thus GDScript) instead use reference counting, freeing you from manual memory management.",
+      "content": "Garbage collection can cause random freezes during gameplay. Godot (and thus GDScript) instead uses reference counting, freeing you from manual memory management.",
       "icon": "garbage-collected"
     },
     {
       "title": "Threading support",
-      "content": "Gdscript has built-in support for multithreading, allowing you to take advantage of multiple CPU cores.",
+      "content": "GDScript has built-in support for multithreading, allowing you to take advantage of multiple CPU cores.",
       "icon": "concurrency"
     }
   ],
