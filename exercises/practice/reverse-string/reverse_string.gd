@@ -1,0 +1,2 @@
+func reverse(str):
+	pass

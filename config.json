@@ -4,16 +4,19 @@
   "active": false,
   "status": {
     "concept_exercises": false,
-    "test_runner": false,
+    "test_runner": true,
     "representer": false,
     "analyzer": false
   },
-  "blurb": "TODO: add blurb",
+  "blurb": "GDScript is a high-level, object-oriented, imperative, and gradually typed programming language built for Godot. It uses an indentation-based syntax similar to languages like Python. Its goal is to be optimized for and tightly integrated with Godot Engine, allowing great flexibility for content creation and integration.",
   "version": 3,
   "online_editor": {
-    "indent_style": "space",
+    "indent_style": "tab",
     "indent_size": 4,
     "highlightjs_language": "gdscript"
+  },
+  "test_runner": {
+    "average_run_time": 2
   },
   "files": {
     "solution": ["%{snake_slug}.gd"],
@@ -25,16 +28,177 @@
     "concept": [],
     "practice": [
       {
+        "uuid": "1adfc420-46f2-4d5b-93a3-165ede1fcd9f",
+        "slug": "hello-world",
+        "name": "Hello World",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "uuid": "e1f3aab9-ca32-4f6f-b266-d05d82c94535",
         "slug": "two-fer",
         "name": "Two Fer",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "c15ce044-1a62-45eb-86a2-079554cbd2c2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "uuid": "c3b37c54-cc4e-49a5-a869-cd7700b0e448",
+        "slug": "leap",
+        "name": "Leap",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "f8afa182-aca3-4464-96b7-9eb7f8d55449",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "6684cbd6-5a15-4e1b-a41c-7f9d17884e7a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "triangle",
+        "name": "triangle",
+        "uuid": "9762dd20-acef-4e3e-b304-8ae2a351d866",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "pangram",
+        "name": "Pangram",
+        "uuid": "385f681c-2b7d-4f32-9662-74b7aaac172b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "0646b090-41a2-428d-b092-1ffbba71b316",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "reverse-string",
+        "name": "Reverse String",
+        "uuid": "963aeaed-a2d5-40e5-8f04-f17f404b5304",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "isogram",
+        "name": "Isogram",
+        "uuid": "fe577db6-0ebe-4c6a-9eb7-04407c7eb900",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "raindrops",
+        "name": "Raindrops",
+        "uuid": "b176d30a-4e4b-4d12-9331-67b03112b575",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "flatten-array",
+        "name": "Flatten Array",
+        "uuid": "a9dd0e93-f34a-47dd-87d2-2e689f5f93f2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "uuid": "9a52fffc-2672-41fb-b3ea-bef9c801726d",
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "cce06bc1-255a-4a7b-a3e2-7d5e3d2445f3",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "luhn",
+        "name": "Luhn",
+        "uuid": "8f7a50ef-60fc-4e72-99de-c5dcf6ae2577",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "3a40dd65-7b56-4e0f-aed6-0e0a28753ca9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "allergies",
+        "name": "Allergies",
+        "uuid": "a7d7c899-ece3-4a4d-9a5b-d7c1ae367b0a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "robot-simulator",
+        "name": "Robot Simulator",
+        "uuid": "31a8cb4a-c211-4daa-a14b-7347fed015a6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "spiral-matrix",
+        "name": "Spiral Matrix",
+        "uuid": "7fbea4aa-0454-43a0-a189-4169b0f762e5",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },
   "concepts": [],
   "key_features": [],
-  "tags": []
+  "tags": [
+    "paradigm/object_oriented",
+    "typing/gradual",
+    "execution_mode/interpreted",
+    "platform/windows",
+    "platform/mac",
+    "platform/linux",
+    "platform/android",
+    "used_for/games"
+  ]
 }

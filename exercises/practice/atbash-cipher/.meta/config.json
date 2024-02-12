@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "pfertyk"
+  ],
+  "files": {
+    "solution": [
+      "atbash_cipher.gd"
+    ],
+    "test": [
+      "atbash_cipher_test.gd"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Atbash"
+}

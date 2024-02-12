@@ -1,13 +1,8 @@
 # Resources
-
-<!-- TODO: write document
-
-  This document should link to useful resources.
-
-  Feel free to link to any good resources you know, whether they
-  be websites, videos, mailing lists, etc.
-
-  The contents of this document are displayed on the track's documentation
-  page at `https://exercism.org/docs/tracks/<track>/resources`.
-
-  See https://exercism.org/docs/building/tracks/docs for more information. -->
+* [Official Godot Homepage](https://godotengine.org/)
+* [Official Godot Documentation](https://docs.godotengine.org/en/stable/)
+* [Official Godot Q&A Platform](https://ask.godotengine.org/)
+* [Official Godot Discord](https://discord.com/invite/4JBkykG)
+* [r/godot on Reddit](https://www.reddit.com/r/godot/)
+* [Godot on Steam](https://steamcommunity.com/app/404790)
+* [Godot Forums](https://godotforums.org/)

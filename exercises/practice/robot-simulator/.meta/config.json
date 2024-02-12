@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "BNAndras"
+  ],
+  "contributors": [
+    "pfertyk"
+  ],
+  "files": {
+    "solution": [
+      "robot_simulator.gd"
+    ],
+    "test": [
+      "robot_simulator_test.gd"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Write a robot simulator.",
+  "source": "Inspired by an interview question at a famous company."
+}
