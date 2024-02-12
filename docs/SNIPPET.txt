@@ -1,1 +1,2 @@
-TODO: add snippet
+func hello(name):
+	return "Hello, %s!" % name
