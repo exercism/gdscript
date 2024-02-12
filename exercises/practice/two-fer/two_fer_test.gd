@@ -1,7 +1,8 @@
-const METHOD_NAME = "two_fer"
+func no_name_given(solution_script):
+	return [solution_script.two_fer(), "One for you, one for me."]
 
-const TEST_CASES = [
-	{"test_name": "no name given", "expected": "One for you, one for me."},
-	{"test_name": "a name given", "args": "Alice", "expected": "One for Alice, one for me."},
-    {"test_name": "another name given", "args": "Bob", "expected": "One for Bob, one for me."},
-]
+func a_name_given(solution_script):
+	return [solution_script.two_fer("Alice"), "One for Alice, one for me."]
+
+func another_name_given(solution_script):
+	return [solution_script.two_fer("Bob"), "One for Bob, one for me."]
