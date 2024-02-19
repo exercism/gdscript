@@ -39,15 +39,18 @@ func test_minimum_possible_value(solution_script):
     var expected = "0 ohms"
     return [expected, solution_script.color_code(colors)]
 
+
 func test_maximum_possible_value(solution_script):
     var colors   = ["white", "white", "white"]
     var expected = "99 gigaohms"
     return [expected, solution_script.color_code(colors)]
 
+
 func test_first_two_colors_make_an_invalid_octal_number(solution_script):
     var colors   = ["black", "grey", "black"]
     var expected = "8 ohms"
     return [expected, solution_script.color_code(colors)]
+
 
 func test_ignore_extra_colors(solution_script):
     var colors   = ["blue", "green", "yellow", "orange"]
