@@ -1,0 +1,16 @@
+{
+  "authors": ["meatball133"],
+  "files": {
+    "solution": [
+      "two_fer.gd"
+    ],
+    "test": [
+      "two_fer_test.gd"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Create a sentence of the form \"One for X, one for me.\".",
+  "source_url": "https://github.com/exercism/problem-specifications/issues/757"
+}
