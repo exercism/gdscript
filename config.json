@@ -52,6 +52,14 @@
         "difficulty": 2
       },
       {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "bf63aff6-54bf-484a-b00d-9a038db249aa",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "uuid": "c3b37c54-cc4e-49a5-a869-cd7700b0e448",
         "slug": "leap",
         "name": "Leap",
