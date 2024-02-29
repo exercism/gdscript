@@ -60,6 +60,14 @@
         "difficulty": 2
       },
       {
+        "slug": "resistor-color-expert",
+        "name": "Resistor Color Expert",
+        "uuid": "af806fda-62fa-4eaa-9b38-a1304a4aed61",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "uuid": "c3b37c54-cc4e-49a5-a869-cd7700b0e448",
         "slug": "leap",
         "name": "Leap",
