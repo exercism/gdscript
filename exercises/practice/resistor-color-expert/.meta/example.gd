@@ -22,7 +22,7 @@ func color_code(colors):
 	var magnitute = pow(10, colors_code.find(colors[-2]))
 
 	for i in range(0, colors.size() - 3 ):
-		magnitute += colors_code.find([colors[i]]) * magnitute
+		total += colors_code.find([colors[i]]) * magnitute
 
 	var tolerance  = tolerances[colors[-1]]
 
