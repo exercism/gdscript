@@ -41,14 +41,14 @@ func test_red_green_yellow_yellow_and_brown(solution_script):
 
 
 func test_blue_grey_white_red_and_brown(solution_script):
-	var colors   = ["black", "brown"]
-	var expected = 1
+	var colors   = ["blue", "grey", "white", "brown", "brown"]
+	var expected = "6.89 kiloohms ±1%"
 	return [expected, solution_script.color_code(colors)]
 
 
 func test_violet_orange_red_and_grey(solution_script):
-	var colors   = ["black", "brown"]
-	var expected = 1
+	var colors   = ["violet", "orange", "red", "grey"]
+	var expected = "7.3 kiloohms ±0.05%"
 	return [expected, solution_script.color_code(colors)]
 
 
