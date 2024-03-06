@@ -140,6 +140,14 @@
         "difficulty": 2
       },
       {
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "b83cec41-58c0-46ff-9fc9-10947d606f0f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "flatten-array",
         "name": "Flatten Array",
         "uuid": "a9dd0e93-f34a-47dd-87d2-2e689f5f93f2",
