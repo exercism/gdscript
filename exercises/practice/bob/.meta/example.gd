@@ -4,7 +4,7 @@ func response(greeting):
 	test_chars.compile("\\p{L}")
 	
 	var is_silence  = trimmed.is_empty()
-	var is_yelling  = test_chars.search(trimmed)
+	var is_yelling  = test_chars.search(trimmed) && (trimmed.to_upper() == trimmed)
 	var is_question = trimmed.ends_with("?")
 	
 	if is_yelling && is_question: return "Calm down, I know what I'm doing!"
