@@ -188,6 +188,14 @@
         "difficulty": 3
       },
       {
+        "slug": "anagram",
+        "name": "Anagram",
+        "uuid": "70e71054-0af0-45c8-918e-b987d555ca78",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "31a8cb4a-c211-4daa-a14b-7347fed015a6",
