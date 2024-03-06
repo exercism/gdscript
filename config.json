@@ -214,7 +214,38 @@
     ]
   },
   "concepts": [],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "Strong, dynamic typing",
+      "content": "GDScript is strong and dynamically typed and supports gradual typing.",
+      "icon": "dynamically-typed"
+    },
+    {
+      "title": "Cross platform",
+      "content": "GDScript code can run wherever Godot runs, either on desktop, mobile, the web and even consoles.",
+      "icon": "cross-platform"
+    },
+    {
+      "title": "Tightly coupled",
+      "content": "GDScript has a deep integration within the Godot game engine: no installation required to use it.",
+      "icon": "embeddable"
+    },
+    {
+      "title": "Types for gamedev",
+      "content": "Specialized types for increased productivity and performance, when working with 2D and 3D games.",
+      "icon": "powerful"
+    },
+    {
+      "title": "No garbage collection",
+      "content": "Garbage collection can cause random freezes during gameplay. Godot instead uses reference counting.",
+      "icon": "garbage-collected"
+    },
+    {
+      "title": "Threading support",
+      "content": "GDScript has support for multithreading, allowing you to take advantage of multiple CPU cores.",
+      "icon": "concurrency"
+    }
+  ],
   "tags": [
     "paradigm/object_oriented",
     "typing/gradual",
