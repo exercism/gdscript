@@ -1,13 +1,13 @@
 func test_color_codes_black(solution_script):
-	return [0, solution_script.color_code("black")]
+	return [solution_script.color_code("black"), 0]
 
 
 func test_color_codes_white(solution_script):
-	return [9, solution_script.color_code("white")]
+	return [solution_script.color_code("white"), 9]
 
 
 func test_color_codes_orange(solution_script):
-	return [3, solution_script.color_code("orange")]
+	return [solution_script.color_code("orange"), 3]
 
 
 func test_colors(solution_script):
@@ -23,4 +23,4 @@ func test_colors(solution_script):
 		"grey",
 		"white"
 	]
-	return [colors, solution_script.colors()]
+	return [solution_script.colors(), colors]

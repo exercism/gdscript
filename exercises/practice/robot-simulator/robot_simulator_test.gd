@@ -3,7 +3,7 @@ func test_create_robot_at_origin_facing_north(robot):
 	robot.direction = "north"
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(0, 0), "north"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_create_robot_at_negative_position_facing_south(robot):
@@ -11,7 +11,7 @@ func test_create_robot_at_negative_position_facing_south(robot):
 	robot.direction = "south"
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(-1, -1), "south"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_rotating_clockwise_changes_north_to_east(robot):
@@ -20,7 +20,7 @@ func test_rotating_clockwise_changes_north_to_east(robot):
 	robot.move("R")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(0, 0), "east"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_rotating_clockwise_changes_east_to_south(robot):
@@ -29,7 +29,7 @@ func test_rotating_clockwise_changes_east_to_south(robot):
 	robot.move("R")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(0, 0), "south"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_rotating_clockwise_changes_south_to_west(robot):
@@ -38,7 +38,7 @@ func test_rotating_clockwise_changes_south_to_west(robot):
 	robot.move("R")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(0, 0), "west"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_rotating_clockwise_changes_west_to_north(robot):
@@ -47,7 +47,7 @@ func test_rotating_clockwise_changes_west_to_north(robot):
 	robot.move("R")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(0, 0), "north"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_rotating_counterclockwise_changes_north_to_west(robot):
@@ -56,7 +56,7 @@ func test_rotating_counterclockwise_changes_north_to_west(robot):
 	robot.move("L")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(0, 0), "west"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_rotating_counterclockwise_changes_west_to_south(robot):
@@ -65,7 +65,7 @@ func test_rotating_counterclockwise_changes_west_to_south(robot):
 	robot.move("L")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(0, 0), "south"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_rotating_counterclockwise_changes_south_to_east(robot):
@@ -74,7 +74,7 @@ func test_rotating_counterclockwise_changes_south_to_east(robot):
 	robot.move("L")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(0, 0), "east"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_rotating_counterclockwise_changes_east_to_north(robot):
@@ -83,7 +83,7 @@ func test_rotating_counterclockwise_changes_east_to_north(robot):
 	robot.move("L")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(0, 0), "north"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_moving_forward_one_facing_north_increments_y(robot):
@@ -92,7 +92,7 @@ func test_moving_forward_one_facing_north_increments_y(robot):
 	robot.move("A")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(0, 1), "north"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_moving_forward_one_facing_south_decrements_y(robot):
@@ -101,7 +101,7 @@ func test_moving_forward_one_facing_south_decrements_y(robot):
 	robot.move("A")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(0, -1), "south"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_moving_forward_one_facing_east_increments_x(robot):
@@ -110,7 +110,7 @@ func test_moving_forward_one_facing_east_increments_x(robot):
 	robot.move("A")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(1, 0), "east"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_moving_forward_one_facing_west_decrements_x(robot):
@@ -119,7 +119,7 @@ func test_moving_forward_one_facing_west_decrements_x(robot):
 	robot.move("A")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(-1, 0), "west"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_moving_east_and_north_from_readme(robot):
@@ -128,7 +128,7 @@ func test_moving_east_and_north_from_readme(robot):
 	robot.move("RAALAL")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(9, 4), "west"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_moving_west_and_north(robot):
@@ -137,7 +137,7 @@ func test_moving_west_and_north(robot):
 	robot.move("LAAARALA")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(-4, 1), "west"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_moving_west_and_south(robot):
@@ -146,7 +146,7 @@ func test_moving_west_and_south(robot):
 	robot.move("RRAAAAALA")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(-3, -8), "south"]
-	return [expected, result]
+	return [result, expected]
 
 
 func test_moving_east_and_north(robot):
@@ -155,4 +155,4 @@ func test_moving_east_and_north(robot):
 	robot.move("LAAARRRALLLL")
 	var result = [robot.position, robot.direction]
 	var expected = [Vector2i(11, 5), "north"]
-	return [expected, result]
+	return [result, expected]
