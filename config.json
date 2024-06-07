@@ -44,6 +44,14 @@
         "difficulty": 1
       },
       {
+        "slug": "hamming",
+        "name": "Hamming",
+        "uuid": "b3fab986-831a-4fb6-ba6b-5ad1ce8b8e43",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
         "uuid": "c15ce044-1a62-45eb-86a2-079554cbd2c2",
