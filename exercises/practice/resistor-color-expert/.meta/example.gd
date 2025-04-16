@@ -30,5 +30,8 @@ func color_code(colors):
 	var tolerance  = tolerances[colors[-1]] #work
 	for key in units.keys():
 		if total >= key:
-			return "%s %s ±%s%%" % [(total / key), units[key], tolerance]
-	return "%s ohms ±%s%%" % [total, tolerance]
+			return "%s %s ±%s%%" % [format_number(total / key), units[key], tolerance]
+	return "%s ohms ±%s%%" % [format_number(total), tolerance]
+
+func format_number(n):
+	return str(int(n)) if n == int(n) else str(n)
