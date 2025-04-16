@@ -13,6 +13,9 @@ func color_code(colors):
 
 	for key in units.keys():
 		if total >= key:
-			return str(total / key) + " " + units[key]
+			return format_number(total / key) + " " + units[key]
 
-	return str(total) + " ohms"
+	return format_number(total) + " ohms"
+
+func format_number(n):
+	return str(int(n)) if n == int(n) else str(n)
