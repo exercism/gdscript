@@ -1,5 +1,5 @@
-func reverse(str):
-	var result = ""
-	for i in range(str.length() - 1, -1, -1):
-		result += str[i]
-	return result
+func reverse(original):
+	var regex = RegEx.create_from_string("\\X")
+	var clusters = regex.search_all(original).map(func(m): return m.get_string())
+	clusters.reverse()
+	return "".join(clusters)
