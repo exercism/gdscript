@@ -40,25 +40,25 @@ func test_null_values_are_omitted_from_the_final_result(solution_script):
 	return [solution_script.flatten(inputs), expected]
 
 
-func test_consecutive_null_values_at_the_front_of_the_list_are_omitted_from_the_final_result(solution_script):
+func test_consecutive_null_values_at_the_front_of_the_array_are_omitted_from_the_final_result(solution_script):
 	var inputs = [null, null, 3]
 	var expected = [3]
 	return [solution_script.flatten(inputs), expected]
 
 
-func test_consecutive_null_values_in_the_middle_of_the_list_are_omitted_from_the_final_result(solution_script):
+func test_consecutive_null_values_in_the_middle_of_the_array_are_omitted_from_the_final_result(solution_script):
 	var inputs = [1, null, null, 4]
 	var expected = [1, 4]
 	return [solution_script.flatten(inputs), expected]
 
 
-func test_6_level_nest_list_with_null_values(solution_script):
+func test_6_level_nest_array_with_null_values(solution_script):
 	var inputs = [0, 2, [[2, 3], 8, [[100]], null, [[null]]], -2]
 	var expected = [0, 2, 2, 3, 8, 100, -2]
 	return [solution_script.flatten(inputs), expected]
 
 
-func test_all_values_in_nested_list_are_null(solution_script):
+func test_all_values_in_nested_array_are_null(solution_script):
 	var inputs = [null, [[[null]]], null, null, [[null, null], null], null]
 	var expected = []
 	return [solution_script.flatten(inputs), expected]
