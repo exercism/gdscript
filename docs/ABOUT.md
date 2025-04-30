@@ -1,14 +1,7 @@
 # About
 
-<!-- TODO: write document
+GDScript is a gradually typed, object-oriented, imperative scripting language created for (and is generally used only with) [Godot Engine](https://godotengine.org/), an open-source 2D and 3D game engine and IDE.  As such, it's heavily optimized around Godot's scene-based architecture, and has native support for data types like 
 
-  This document contains a short introduction to the language.
+Since GDScript shares a number with popular languages (for example, its syntax resembles Python), learning GDScript can be a fun gateway to both Godot game programming and to learning other programming languages.  If you're already interested in Godot and not sure which of its supported languages to learn, you might be interested to read [What is GDScript and why should I use it?](https://docs.godotengine.org/en/stable/about/faq.html#what-is-gdscript-and-why-should-i-use-it).
 
-  The introduction should be relatively brief and touch upon what
-  makes the language interesting (and possibly unique). The goal
-  is to help students decide if they want to join this track.
-
-  The contents of this document are displayed on the track page,
-  provided the student has not joined the track.
-
-  See https://exercism.org/docs/building/tracks/docs for more information. -->
+If you're curious why Godot created their own language, you can read more at [What were the motivations behind creating GDScript?](https://docs.godotengine.org/en/stable/about/faq.html#what-were-the-motivations-behind-creating-gdscript).
