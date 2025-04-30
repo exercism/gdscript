@@ -1,15 +1,15 @@
 # Installation
 
-<!-- TODO: write document
+## Installing Godot Engine
 
-  This document should describe what the student needs to install
-  to allow working on the track on their local system using the CLI.
+The GDScript track is built on top of [Godot Engine](https://godotengine.org/), which runs on Windows, Linux, macOS, and Android. This track requires Godot version 4.0 or greater.
 
-  You can include the installation instructions in this document, but
-  usually it is better to link to a resource with the official installation
-  instructions, to prevent the instructions from becoming outdated.
+After completing the installation, you can verify if the CLI was installed successfully by running this command in a terminal:
 
-  The contents of this document are displayed on the track's documentation
-  page at `https://exercism.org/docs/tracks/<track>/installation`.
+```bash
+godot --version
+```
 
-  See https://exercism.org/docs/building/tracks/docs for more information. -->
+## Using an IDE
+
+For syntax checking of GDScript files from, for example, [Visual Studio Code](https://code.visualstudio.com/download), you'll need to keep the Godot GUI running with a project open in order to activate the debug server, and an extension like [godot-tools](https://open-vsx.org/vscode/item?itemName=geequlim.godot-tools) installed and activated.
