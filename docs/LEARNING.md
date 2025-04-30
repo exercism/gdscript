@@ -1,13 +1,10 @@
-# Learning
+# Learning GDScript
 
-<!-- TODO: write document
+## Websites
 
-  This document should link to learning resources.
+* [GDScript.com](https://gdscript.com/)
+* [Learn to Code From Zero with Godot](https://gdquest.github.io/learn-gdscript/)
 
-  Feel free to link to any good learning resources you know, whether they
-  be websites, blogs, books, videos or courses.
+## Courses
 
-  The contents of this document are displayed on the track's documentation
-  page at `https://exercism.org/docs/tracks/<track>/learning`.
-
-  See https://exercism.org/docs/building/tracks/docs for more information. -->
+* [Learn GDScript on Udemy](https://www.udemy.com/course/learn-the-gdscript-programming-language/)
