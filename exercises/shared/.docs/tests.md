@@ -1,15 +1,15 @@
 # Tests
 
-<!-- TODO: write document
+## Running tests
 
-  This document should contain instructions on how to run the exercise's tests.
+With the [installation steps](https://exercism.org/docs/tracks/gdscript/tests) done, you should be able start from any exercise directory (e.g., `~/exercism/gdscript/two-fer`) and run the script (living one level up, in `../`) to test your local solution to that exercise:
 
-  The instructions should be short and to the point.
+```sh
+../test-local-gdscript-solution.sh
+```
 
-  The docs/TESTS.md file can contain a more verbose description on how to run tests.
+## Solving an exercise
 
-  When a student downloads an exercise via the CLI, this file's contents are
-  included into the HELP.md file.
+Solving an exercise means making all its tests pass.
 
-  See https://exercism.org/docs/building/tracks/shared-files for more information.
--->
+To help you get started, each exercise comes with a GDScript file named after the exercise (e.g., `exercism/gdscript/two-fer/two_fer.gd`). You can use this file as a starting point for building your solution. Feel free to change it as needed, but the tests expect the function names to be as originally provided.
