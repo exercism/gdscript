@@ -180,6 +180,14 @@
         "difficulty": 2
       },
       {
+        "slug": "armstrong-numbers",
+        "name": "Armstrong Numbers",
+        "uuid": "12bc423d-7c01-43c5-b091-43e6402d3cfb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "allergies",
         "name": "Allergies",
         "uuid": "a7d7c899-ece3-4a4d-9a5b-d7c1ae367b0a",
