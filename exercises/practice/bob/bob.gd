@@ -1,0 +1,2 @@
+func response(greeting):
+	pass
