@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "pfertyk"
+  ],
+  "files": {
+    "solution": [
+      "protein_translation.gd"
+    ],
+    "test": [
+      "protein_translation_test.gd"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Translate RNA sequences into proteins.",
+  "source": "Tyler Long"
+}

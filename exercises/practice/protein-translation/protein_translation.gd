@@ -1,0 +1,2 @@
+func proteins(strand):
+	pass
