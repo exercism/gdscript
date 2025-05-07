@@ -254,6 +254,8 @@
     "platform/mac",
     "platform/linux",
     "platform/android",
+    "platform/ios",
+    "platform/web",
     "used_for/games"
   ]
 }
