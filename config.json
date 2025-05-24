@@ -164,6 +164,14 @@
         "difficulty": 2
       },
       {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "a93332b7-d630-4c58-b69f-3a01481774de",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "8f7a50ef-60fc-4e72-99de-c5dcf6ae2577",
