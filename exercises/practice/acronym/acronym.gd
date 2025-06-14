@@ -1,0 +1,2 @@
+func acronym(phrase):
+	pass
