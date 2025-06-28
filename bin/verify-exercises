@@ -14,7 +14,7 @@ run_test() {
     cp ${test_file} ${temp_dir}
     cp ${example_file} "${temp_dir}/${solution_file_name}"
     # Run the tests
-    (cd /opt/test-runner && bin/run.sh $slug $temp_dir $temp_dir) || exit 1
+    (cd /opt/exercism/gdscript/test-runner && bin/run.sh $slug $temp_dir $temp_dir) || exit 1
     # Check status
     if [[ `cat $temp_dir/results.json` =~ '  "status": "fail",' ]]; then
     	echo "Tests for $slug have failed:"
