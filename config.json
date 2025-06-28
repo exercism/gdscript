@@ -164,6 +164,14 @@
         "difficulty": 2
       },
       {
+        "slug": "bob",
+        "name": "Bob",
+        "uuid": "e635e0f6-8265-412f-b36e-e10b2079b74f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "8f7a50ef-60fc-4e72-99de-c5dcf6ae2577",
