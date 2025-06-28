@@ -1,40 +1,40 @@
 #!/usr/bin/env bash
 
 temp_dir_base=$(mktemp -d)
-echo $(godot --version)
+godot --version
 
 run_test() {
-    slug=$(basename $1)
+    slug=$(basename "$1")
     temp_dir=${temp_dir_base}/${slug}
-    mkdir -p ${temp_dir}
+    mkdir -p "${temp_dir}"
     # Copy relevant files to the temp directory (replace solution with example)
     solution_file_name="$slug.gd"
     test_file="${slug}_test.gd"
     example_file=".meta/example.gd"
-    cp ${test_file} ${temp_dir}
+    cp "${test_file}" "${temp_dir}"
     cp ${example_file} "${temp_dir}/${solution_file_name}"
     # Run the tests
-    (cd /opt/exercism/gdscript/test-runner && bin/run.sh $slug $temp_dir $temp_dir) || exit 1
+    (cd /opt/exercism/gdscript/test-runner && bin/run.sh "$slug" "$temp_dir" "$temp_dir") || exit 1
     # Check status
-    if [[ `cat $temp_dir/results.json` =~ '  "status": "fail",' ]]; then
+    if [[ $(cat "$temp_dir"/results.json) =~ '  "status": "fail",' ]]; then
     	echo "Tests for $slug have failed:"
-    	cat $temp_dir/results.json
+    	cat "$temp_dir"/results.json
     	exit 1
     fi
 }
 
 # Verify the Concept Exercises
 for concept_exercise_dir in ./exercises/concept/*/; do
-    if [ -d $concept_exercise_dir ]; then
+    if [ -d "$concept_exercise_dir" ]; then
         echo "Checking $(basename "${concept_exercise_dir}") exercise..."
-        run_test $concept_exercise_dir
+        run_test "$concept_exercise_dir"
     fi
 done
 
 # Verify the Practice Exercises
 for practice_exercise_dir in ./exercises/practice/*/; do
-    if [ -d $practice_exercise_dir ]; then
+    if [ -d "$practice_exercise_dir" ]; then
         echo "Checking $(basename "${practice_exercise_dir}") exercise..."
-        run_test $practice_exercise_dir
+        run_test "$practice_exercise_dir"
     fi
 done
