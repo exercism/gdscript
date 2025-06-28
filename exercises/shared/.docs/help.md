@@ -1,21 +1,15 @@
 # Help
 
-<!-- TODO: write document
+To get help if you're having trouble, you can use one of the following resources:
 
-  This document should contain track-specific instructions on how to get help when
-  the student is stuck.
+* [Stack Overflow][stack-overflow]
+* [Godot Subreddit][subreddit]
+* [Official Godot Discord][discord]
+* [GDScript Discussions on Official Godot Forum][official-forum]
+* [GDScript Discussions on (Unofficial) Godot Forums][unofficial-forums]
 
-  The instructions should be short and to the point.
-
-  You could link to resources like Gitter channels, forums or mailing lists:
-  whatever can help a student become unstuck.
-
-  This document should **not** link to Exercism-wide (track-agnostic) help resources,
-  as those resources will automatically be included in the HELP.md file.
-
-  The links in this document can overlap with those in docs/LEARNING.md or docs/RESOURCES.md
-
-  When a student downloads an exercise via the CLI, this file's contents are
-  included into the HELP.md file.
-
-  See https://exercism.org/docs/building/tracks/shared-files for more information. -->
+[stack-overflow]: https://stackoverflow.com/questions/tagged/gdscript
+[subreddit]: https://www.reddit.com/r/godot/
+[discord]: https://discord.com/invite/4JBkykG
+[official-forum]: https://forum.godotengine.org/tag/gdscript
+[unofficial-forums]: https://godotforums.org/t/gdscript
