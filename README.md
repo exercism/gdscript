@@ -14,7 +14,7 @@ sudo mkdir -p /opt/exercism/gdscript/
 sudo mv gdscript-test-runner/ /opt/exercism/gdscript/test-runner/
 ```
 
-To test the exercises, run `./bin/verify-exercises`.
+To test the exercises, run `godot --headless -s bin/verify-exercises.gd`.
 This command will iterate over all exercises and check to see if their exemplar/example implementation passes all the tests.
 
 ### Track linting
