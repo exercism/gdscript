@@ -6,9 +6,15 @@ Exercism exercises in GDScript.
 
 ## Testing
 
-To set up for testing, clone https://github.com/exercism/gdscript-test-runner and move its contents to `/opt/test-runner`.
+To set up for testing, clone https://github.com/exercism/gdscript-test-runner and move its contents to `/opt/exercism/gdscript/test-runner`:
 
-To test the exercises, run `./bin/verify-exercises`.
+```sh
+git clone https://github.com/exercism/gdscript-test-runner.git
+sudo mkdir -p /opt/exercism/gdscript/
+sudo mv gdscript-test-runner/ /opt/exercism/gdscript/test-runner/
+```
+
+To test the exercises, run `godot --headless -s bin/verify-exercises.gd`.
 This command will iterate over all exercises and check to see if their exemplar/example implementation passes all the tests.
 
 ### Track linting
