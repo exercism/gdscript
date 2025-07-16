@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        uses: actions/checkout@210dc4c78d58bf11ef2da2aecda7ae8ad3aa4730
 
       - name: Verify all exercises
         run: godot --headless -s bin/verify-exercises.gd
