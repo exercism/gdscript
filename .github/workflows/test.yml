@@ -23,13 +23,13 @@ on:
 
 jobs:
   ci:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     container:
       image: exercism/gdscript-test-runner
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@210dc4c78d58bf11ef2da2aecda7ae8ad3aa4730
+        uses: actions/checkout@09d2acae674a48949e3602304ab46fd20ae0c42f
 
       - name: Verify all exercises
         run: godot --headless -s bin/verify-exercises.gd
