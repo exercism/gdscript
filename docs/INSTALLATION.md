@@ -30,7 +30,7 @@ sudo mv gdscript-test-runner/ /opt/exercism/gdscript/test-runner/
 
 ### Step 2: Downloading the single-exercise test runner script
 
-Assuming you have the `exercism` tool set up and have downloaded at least one GDScript exercise, it should have created an `exercism/gdscript` folder to house the exercises.
+Assuming you have the `exercism` tool set up and have downloaded at least one GDScript exercise, it should have created a `gdscript` folder under your workspace (as shown by running `exercism configure`) to house the exercises.
 Save [the test runner][test-local-gdscript-solution] in this folder and mark the file executable.
 
 ## Running tests
