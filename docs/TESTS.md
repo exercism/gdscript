@@ -1,15 +1,40 @@
 # Tests
 
-<!-- TODO: write document
+## Installing the Exercism GDScript track test runner
 
-  This document should describe everything related to running tests in the track.
+You'll need [Godot installed][installation] correctly to use the test runner.
 
-  If your track uses skipped tests, this document can explain why thet is used and
-  how to unskip tests.
+To build and test GDScript scripts for Exercism, Godot will be run in "headless" mode from the CLI.
+These instructions currently require Linux and bash.
 
-  This document can also link to the testing framework documentation.
+### Step 1: Installing the overall test runner infrastructure
 
-  The contents of this document are displayed on the track's documentation
-  page at `https://exercism.org/docs/tracks/<track>/tests`.
+To set up for testing, clone [https://github.com/exercism/gdscript-test-runner][gdscript-test-runner] and move its contents to `/opt/exercism/gdscript/test-runner/`:
 
-  See https://exercism.org/docs/building/tracks/docs for more information. -->
+```sh
+git clone https://github.com/exercism/gdscript-test-runner.git
+sudo mkdir -p /opt/exercism/gdscript/
+sudo mv gdscript-test-runner/ /opt/exercism/gdscript/test-runner/
+```
+
+### Step 2: Downloading the single-exercise test runner script
+
+Assuming you have the `exercism` tool set up and have downloaded at least one GDScript exercise, it should have created an `exercism/gdscript` folder to house the exercises.
+Save [the test runner][test-local-gdscript-solution] in this folder and mark the file executable, or just create a link to it:
+
+```sh
+cd ~/exercism/gdscript # replace with your exercism/gdscript directory
+ln /opt/exercism/gdscript/test-runner/bin/test-local-gdscript-solution.sh
+```
+
+## Running tests
+
+With the installation steps done, you should be able start from any exercise directory (e.g., `~/exercism/gdscript/two-fer`) and run the script (living one level up, in `../`) to test your local solution to that exercise:
+
+```sh
+../test-local-gdscript-solution.sh
+```
+
+[installation]: https://exercism.org/docs/tracks/gdscript/installation
+[gdscript-test-runner]: https://github.com/exercism/gdscript-test-runner
+[test-local-gdscript-solution]: https://raw.githubusercontent.com/exercism/gdscript-test-runner/refs/heads/main/bin/test-local-gdscript-solution.sh

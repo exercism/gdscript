@@ -93,7 +93,7 @@
       },
       {
         "slug": "triangle",
-        "name": "triangle",
+        "name": "Triangle",
         "uuid": "9762dd20-acef-4e3e-b304-8ae2a351d866",
         "practices": [],
         "prerequisites": [],
@@ -254,6 +254,8 @@
     "platform/mac",
     "platform/linux",
     "platform/android",
+    "platform/ios",
+    "platform/web",
     "used_for/games"
   ]
 }
