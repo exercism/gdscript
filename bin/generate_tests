@@ -119,7 +119,7 @@ def generate(specs: pathlib.Path, exercise: pathlib.Path) -> None:
     # Render the template.
     try:
         template = jinja_env(exercise).get_template("template.j2")
-        out = template.render(data)
+        out = template.render(data).strip()
     except jinja2.exceptions.TemplateAssertionError as e:
         e.add_note(f"Error rendering template for {exercise.name}")
         raise
@@ -128,7 +128,7 @@ def generate(specs: pathlib.Path, exercise: pathlib.Path) -> None:
     test_file = exercise / json.loads((exercise / ".meta/config.json").read_text())["files"]["test"][0]
     if test_file.exists():
         old_content = test_file.read_text()
-        if old_content.strip() == out.strip():
+        if old_content.strip() == out:
             return
 
     # Write the test file.

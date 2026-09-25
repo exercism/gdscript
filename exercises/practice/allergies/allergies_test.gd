@@ -284,4 +284,3 @@ func test_list_when_no_allergen_score_parts_without_highest_valid_score(allergie
 		_sorted(allergies.lst),
 		_sorted(['eggs'])
 	]
-
