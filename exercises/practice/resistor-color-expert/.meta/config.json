@@ -1,5 +1,7 @@
 {
-  "authors": ["glaxxie"],
+  "authors": [
+    "glaxxie"
+  ],
   "files": {
     "solution": [
       "resistor_color_expert.gd"
