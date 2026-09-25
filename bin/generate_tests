@@ -3,15 +3,14 @@
 """Test generator v1."""
 
 import argparse
-import datetime
 import json
 import os
 import pathlib
 import re
 import shlex
+import string
 import subprocess
 import sys
-import textwrap
 import tomllib
 
 import jinja2
@@ -107,20 +106,13 @@ def bool_to_str(obj):
 def generate(specs: pathlib.Path, exercise: pathlib.Path) -> None:
     """Generate and write test file for a given spec and exercise."""
     cases = get_cases(specs, exercise)
+    translation = str.maketrans({i: "_" for i in string.punctuation + " "})
     for case in cases:
         case["expected"] = bool_to_str(case["expected"])
+        case["func_name"] = re.sub("_+", "_", case["description"].lower().translate(translation))
 
-    timestamp = datetime.datetime.now(tz=datetime.UTC).replace(microsecond=0).isoformat()
-    header = textwrap.dedent(f"""\
-        #!/usr/bin/env bats
-        load bats-extra
-
-        # generated on {timestamp}
-        """
-    ).strip()
     data = {
         "cases": cases,
-        "header": header,
         "solution": json.loads((exercise / ".meta/config.json").read_text())["files"]["solution"][0]
     }
 
@@ -135,9 +127,8 @@ def generate(specs: pathlib.Path, exercise: pathlib.Path) -> None:
     # Check for changes or the lack thereof.
     test_file = exercise / json.loads((exercise / ".meta/config.json").read_text())["files"]["test"][0]
     if test_file.exists():
-        old_content = [i for i in test_file.read_text().strip().splitlines() if "generated on" not in i]
-        new_content = [i for i in out.splitlines() if "generated on" not in i]
-        if old_content == new_content:
+        old_content = test_file.read_text()
+        if old_content.strip() == out.strip():
             return
 
     # Write the test file.
