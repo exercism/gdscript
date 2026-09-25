@@ -64,7 +64,7 @@ func run_test(slug: String, exercise_dir: String, temp_dir_base_path: String) ->
 	# Run external test script
 	var args = [slug, temp_dir, temp_dir]
 	var output = []
-	var exit_code = OS.execute("/opt/exercism/gdscript/test-runner/bin/run.sh", args, output, true)
+	var exit_code = OS.execute("/opt/test-runner/bin/run.sh", args, output, true)
 	if exit_code != 0:
 		push_error("Test runner failed for ", slug, " with ", output)
 		return ERR_SCRIPT_FAILED
