@@ -5,7 +5,6 @@ func _sorted(array):
 	return array
 
 
-# testing for eggs allergy
 
 func test_eggs_not_allergic_to_anything(allergies):
 	allergies.score = 0
@@ -32,8 +31,6 @@ func test_eggs_allergic_to_everything(allergies):
 	return [allergies.allergic_to("eggs"), true]
 
 
-# testing for peanuts allergy
-
 func test_peanuts_not_allergic_to_anything(allergies):
 	allergies.score = 0
 	return [allergies.allergic_to("peanuts"), false]
@@ -58,8 +55,6 @@ func test_peanuts_allergic_to_everything(allergies):
 	allergies.score = 255
 	return [allergies.allergic_to("peanuts"), true]
 
-
-# testing for shellfish allergy
 
 func test_shellfish_not_allergic_to_anything(allergies):
 	allergies.score = 0
@@ -86,8 +81,6 @@ func test_shellfish_allergic_to_everything(allergies):
 	return [allergies.allergic_to("shellfish"), true]
 
 
-# testing for strawberries allergy
-
 func test_strawberries_not_allergic_to_anything(allergies):
 	allergies.score = 0
 	return [allergies.allergic_to("strawberries"), false]
@@ -112,8 +105,6 @@ func test_strawberries_allergic_to_everything(allergies):
 	allergies.score = 255
 	return [allergies.allergic_to("strawberries"), true]
 
-
-# testing for tomatoes allergy
 
 func test_tomatoes_not_allergic_to_anything(allergies):
 	allergies.score = 0
@@ -140,8 +131,6 @@ func test_tomatoes_allergic_to_everything(allergies):
 	return [allergies.allergic_to("tomatoes"), true]
 
 
-# testing for chocolate allergy
-
 func test_chocolate_not_allergic_to_anything(allergies):
 	allergies.score = 0
 	return [allergies.allergic_to("chocolate"), false]
@@ -166,8 +155,6 @@ func test_chocolate_allergic_to_everything(allergies):
 	allergies.score = 255
 	return [allergies.allergic_to("chocolate"), true]
 
-
-# testing for pollen allergy
 
 func test_pollen_not_allergic_to_anything(allergies):
 	allergies.score = 0
@@ -194,8 +181,6 @@ func test_pollen_allergic_to_everything(allergies):
 	return [allergies.allergic_to("pollen"), true]
 
 
-# testing for cats allergy
-
 func test_cats_not_allergic_to_anything(allergies):
 	allergies.score = 0
 	return [allergies.allergic_to("cats"), false]
@@ -221,48 +206,67 @@ func test_cats_allergic_to_everything(allergies):
 	return [allergies.allergic_to("cats"), true]
 
 
-# list when:
-
 func test_list_when_no_allergies(allergies):
 	allergies.score = 0
-	return [allergies.lst, []]
+	return [
+		_sorted(allergies.lst),
+		_sorted([])
+	]
 
 
 func test_list_when_just_eggs(allergies):
 	allergies.score = 1
-	return [allergies.lst, ["eggs"]]
+	return [
+		_sorted(allergies.lst),
+		_sorted(['eggs'])
+	]
 
 
 func test_list_when_just_peanuts(allergies):
 	allergies.score = 2
-	return [allergies.lst, ["peanuts"]]
+	return [
+		_sorted(allergies.lst),
+		_sorted(['peanuts'])
+	]
 
 
 func test_list_when_just_strawberries(allergies):
 	allergies.score = 8
-	return [allergies.lst, ["strawberries"]]
+	return [
+		_sorted(allergies.lst),
+		_sorted(['strawberries'])
+	]
 
 
 func test_list_when_eggs_and_peanuts(allergies):
 	allergies.score = 3
-	return [_sorted(allergies.lst), ["eggs", "peanuts"]]
+	return [
+		_sorted(allergies.lst),
+		_sorted(['eggs', 'peanuts'])
+	]
 
 
 func test_list_when_more_than_eggs_but_not_peanuts(allergies):
 	allergies.score = 5
-	return [_sorted(allergies.lst), ["eggs", "shellfish"]]
+	return [
+		_sorted(allergies.lst),
+		_sorted(['eggs', 'shellfish'])
+	]
 
 
 func test_list_when_lots_of_stuff(allergies):
 	allergies.score = 248
-	return [_sorted(allergies.lst), ["cats", "chocolate", "pollen", "strawberries", "tomatoes"]]
+	return [
+		_sorted(allergies.lst),
+		_sorted(['strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats'])
+	]
 
 
 func test_list_when_everything(allergies):
 	allergies.score = 255
 	return [
 		_sorted(allergies.lst),
-		["cats", "chocolate", "eggs", "peanuts", "pollen", "shellfish", "strawberries", "tomatoes"]
+		_sorted(['eggs', 'peanuts', 'shellfish', 'strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats'])
 	]
 
 
@@ -270,10 +274,14 @@ func test_list_when_no_allergen_score_parts(allergies):
 	allergies.score = 509
 	return [
 		_sorted(allergies.lst),
-		["cats", "chocolate", "eggs", "pollen", "shellfish", "strawberries", "tomatoes"]
+		_sorted(['eggs', 'shellfish', 'strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats'])
 	]
 
 
 func test_list_when_no_allergen_score_parts_without_highest_valid_score(allergies):
 	allergies.score = 257
-	return [allergies.lst, ["eggs"]]
+	return [
+		_sorted(allergies.lst),
+		_sorted(['eggs'])
+	]
+
