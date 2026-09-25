@@ -21,11 +21,11 @@ These instructions currently require Linux and bash.
 
 ### Step 1: Installing the overall test runner infrastructure
 
-To set up for testing, clone [https://github.com/exercism/gdscript-test-runner][gdscript-test-runner] and move its contents to `/opt/exercism/gdscript/test-runner/`:
+To set up for testing, clone [https://github.com/exercism/gdscript-test-runner][gdscript-test-runner] and move its contents to `/opt/test-runner/`:
 
 ```sh
 git clone https://github.com/exercism/gdscript-test-runner.git
-sudo mv gdscript-test-runner/ /opt/exercism/gdscript/test-runner/
+sudo mv gdscript-test-runner/ /opt/test-runner/
 ```
 
 ### Step 2: Downloading the single-exercise test runner script

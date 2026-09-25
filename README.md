@@ -10,12 +10,12 @@ There are two options for iterating over all exercises to see if their exemplar/
 
 ### Option A: Via local `godot`
 
-To set up for testing, clone https://github.com/exercism/gdscript-test-runner and move its contents to `/opt/exercism/gdscript/test-runner`:
+To set up for testing, clone https://github.com/exercism/gdscript-test-runner and move its contents to `/opt/test-runner`:
 
 ```sh
 git clone https://github.com/exercism/gdscript-test-runner.git
-sudo mkdir -p /opt/exercism/gdscript/
-sudo mv gdscript-test-runner/ /opt/exercism/gdscript/test-runner/
+sudo mkdir -p /opt/
+sudo mv gdscript-test-runner/ /opt/test-runner/
 ```
 
 To test the exercises, run `godot --headless -s bin/verify-exercises.gd` from the present repo's root (not the gdscript-test-runner repo root).
