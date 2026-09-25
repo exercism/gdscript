@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "glaxxie"
+  ],
+  "files": {
+    "solution": [
+      "armstrong_numbers.gd"
+    ],
+    "test": [
+      "armstrong_numbers_test.gd"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Determine if a number is an Armstrong number.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number"
+}
