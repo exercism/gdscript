@@ -216,7 +216,8 @@
         "uuid": "c9d72016-4314-4086-8642-1e9e006e19ab",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3
+        "difficulty": 3,
+        "status": "deprecated"
       },
       {
         "slug": "spiral-matrix",
