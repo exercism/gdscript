@@ -20,18 +20,18 @@ func leap_year(year):
     
 ```
 
-For more information, see the [Boolean chain approach][approach-boolean-chain].
+For more information, see the [Boolean chain approach][approach-boolean-chain]. #TBU
 
 
 ## Approach: Ternary Operator of Boolean Expressions
 
-```python
+```gdscript
 func leap_year(year):
     return (not year % 400 if not year % 100 else not year % 4)
     
 ```
 
-For more information, see the [Ternary operator approach][approach-ternary-operator].
+For more information, see the [Ternary operator approach][approach-ternary-operator]. #TBU
 
 
 ## Other Approaches
@@ -44,7 +44,7 @@ Besides the aforementioned idiomatic approaches, you could also approach the exe
 Add a day to February 28th for the year and see if the new day is the 29th.
 However, this approach may trade speed for convenience.
 
-```python
+```gdscript
 import datetime
 
 def leap_year(year):
