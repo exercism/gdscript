@@ -1,0 +1,11 @@
+{% for case in cases %}
+func test_{{ case["func_name"] }}(solution_script):
+	var got = solution_script.find({{ case["input"]["array"] }}, {{ case["input"]["value"] }})
+	{%- if case["expect_error"] %}
+	var want = false
+	{%- else %}
+	var want = {{ case["expected"] }}
+	{%- endif %}
+	return [got, want]
+
+{% endfor %}
