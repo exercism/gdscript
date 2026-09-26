@@ -1,0 +1,22 @@
+func _sorted(array):
+	# Array.sort() sorts an array in place and returns null.
+	# This helper method allows us to sort and compare in the same line.
+	array.sort()
+	return array
+
+{% for case in cases %}
+{%- if case["property"] == "allergicTo" %}
+
+func test_{{ case["input"]["item"] }}_{{ case["func_name"] }}(allergies):
+	allergies.score = {{ case["input"]["score"] }}
+	return [allergies.allergic_to("{{ case["input"]["item"] }}"), {{ case["expected"] }}]
+{%- else %}
+
+func test_list_when_{{ case["func_name"] }}(allergies):
+	allergies.score = {{ case["input"]["score"] }}
+	return [
+		_sorted(allergies.lst),
+		_sorted({{ case["expected"] }})
+	]
+{%- endif %}
+{% endfor %}

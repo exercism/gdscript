@@ -82,7 +82,7 @@ func test_just_outside_the_outer_circle(solution_script):
 	return [solution_script.score(x, y), expected]
 
 
-func test_asymmetric_position(solution_script):
+func test_asymmetric_position_between_the_inner_and_middle_circles(solution_script):
 	var x = 0.5
 	var y = -4
 	var expected = 5
