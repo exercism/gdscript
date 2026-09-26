@@ -1,0 +1,7 @@
+{% for case in cases %}
+func test_{{ case["func_name"] }}(solution_script):
+	var got = solution_script.{{ case["property"] }}("{{ case["input"]["phrase"] }}")
+	var want = "{{ case["expected"] }}"
+	return [got, want]
+
+{% endfor %}
