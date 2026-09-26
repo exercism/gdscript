@@ -47,7 +47,7 @@ However, this approach may trade speed for convenience.
 ```gdscript
 import datetime
 
-def leap_year(year):
+func leap_year(year):
     return (datetime.datetime(year, 2, 28) + datetime.timedelta(days=1)).day == 29
 ```
 
@@ -59,10 +59,10 @@ For more information, see the [`datetime` addition approach][approach-datetime-a
 It is possible to use [`calendar.isleap(<year>)`][isleap] from the standard library, which solves this exact problem:
 
 
-```python
+```gdscript
 from calendar import isleap
 
-def leap_year(year):
+func leap_year(year):
     return isleap(year)
 ```
 
