@@ -1,0 +1,12 @@
+{% for case in cases %}
+func test_{{ case.func_name }}(solution_script):
+	var got = solution_script.{{ case.property }}({{ case.input.number }})
+{%- if not case.expect_error %}
+	var want = {{ case.expected }}
+{%- else %}
+	var want = ERR_INVALID_PARAMETER
+{%- endif %}
+	return [got, want]
+
+{% endfor %}
+
