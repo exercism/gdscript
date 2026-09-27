@@ -1,0 +1,27 @@
+{% for case in cases %}
+func test_{{ case.func_name }}(solution_script):
+	var got = solution_script.{{ case.property }}({{ case.given }})
+{%- if not case.expect_error %}
+	var want = {{ case.expected }}
+{%- else %}
+	var want = null
+{%- endif %}
+	return [got, want]
+
+{% endfor -%}
+func test_grains_on_square_63(solution_script):
+	var got = solution_script.square(63)
+	var want = 4611686018427387904
+	return [got, want]
+
+
+func test_square_greater_than_63_is_invalid(solution_script):
+	var got = solution_script.square(64)
+	var want = null
+	return [got, want]
+
+
+func test_returns_the_total_number_of_grains_on_the_board(solution_script):
+	var got = solution_script.total()
+	var want = 9223372036854775807
+	return [got, want]

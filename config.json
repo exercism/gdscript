@@ -141,6 +141,14 @@
         "difficulty": 2
       },
       {
+        "slug": "grains",
+        "name": "Grains",
+        "uuid": "81fc1ce2-98c9-4468-92df-127d8dff0d45",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "hamming",
         "name": "Hamming",
         "uuid": "c7b1c12c-228d-4573-9e68-511b9d243e9b",
