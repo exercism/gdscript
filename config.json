@@ -43,38 +43,6 @@
         "difficulty": 1
       },
       {
-        "slug": "two-fer",
-        "name": "Two Fer",
-        "uuid": "e1f3aab9-ca32-4f6f-b266-d05d82c94535",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1
-      },
-      {
-        "slug": "resistor-color-duo",
-        "name": "Resistor Color Duo",
-        "uuid": "c15ce044-1a62-45eb-86a2-079554cbd2c2",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "resistor-color-trio",
-        "name": "Resistor Color Trio",
-        "uuid": "bf63aff6-54bf-484a-b00d-9a038db249aa",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "resistor-color-expert",
-        "name": "Resistor Color Expert",
-        "uuid": "af806fda-62fa-4eaa-9b38-a1304a4aed61",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
         "slug": "leap",
         "name": "Leap",
         "uuid": "c3b37c54-cc4e-49a5-a869-cd7700b0e448",
@@ -83,73 +51,17 @@
         "difficulty": 1
       },
       {
-        "slug": "resistor-color",
-        "name": "Resistor Color",
-        "uuid": "f8afa182-aca3-4464-96b7-9eb7f8d55449",
+        "slug": "two-fer",
+        "name": "Two Fer",
+        "uuid": "e1f3aab9-ca32-4f6f-b266-d05d82c94535",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2
+        "difficulty": 1
       },
       {
-        "slug": "space-age",
-        "name": "Space Age",
-        "uuid": "6684cbd6-5a15-4e1b-a41c-7f9d17884e7a",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "triangle",
-        "name": "Triangle",
-        "uuid": "9762dd20-acef-4e3e-b304-8ae2a351d866",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "pangram",
-        "name": "Pangram",
-        "uuid": "385f681c-2b7d-4f32-9662-74b7aaac172b",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "darts",
-        "name": "Darts",
-        "uuid": "0646b090-41a2-428d-b092-1ffbba71b316",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "reverse-string",
-        "name": "Reverse String",
-        "uuid": "963aeaed-a2d5-40e5-8f04-f17f404b5304",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "isogram",
-        "name": "Isogram",
-        "uuid": "fe577db6-0ebe-4c6a-9eb7-04407c7eb900",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "raindrops",
-        "name": "Raindrops",
-        "uuid": "b176d30a-4e4b-4d12-9331-67b03112b575",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "flatten-array",
-        "name": "Flatten Array",
-        "uuid": "a9dd0e93-f34a-47dd-87d2-2e689f5f93f2",
+        "slug": "armstrong-numbers",
+        "name": "Armstrong Numbers",
+        "uuid": "12bc423d-7c01-43c5-b091-43e6402d3cfb",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
@@ -171,12 +83,36 @@
         "difficulty": 2
       },
       {
-        "slug": "luhn",
-        "name": "Luhn",
-        "uuid": "8f7a50ef-60fc-4e72-99de-c5dcf6ae2577",
+        "slug": "bob",
+        "name": "Bob",
+        "uuid": "c17ed683-e851-4b45-a4a7-f127dadb1b01",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3
+        "difficulty": 2
+      },
+      {
+        "slug": "collatz-conjecture",
+        "name": "Collatz Conjecture",
+        "uuid": "00561d93-d636-4e44-9590-88de0e3eccc9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "0646b090-41a2-428d-b092-1ffbba71b316",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "difference-of-squares",
+        "name": "Difference of Squares",
+        "uuid": "1065256b-5263-443f-9f67-28d0fa2e9b93",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       },
       {
         "slug": "eliuds-eggs",
@@ -187,9 +123,105 @@
         "difficulty": 2
       },
       {
-        "slug": "armstrong-numbers",
-        "name": "Armstrong Numbers",
-        "uuid": "12bc423d-7c01-43c5-b091-43e6402d3cfb",
+        "slug": "etl",
+        "name": "ETL",
+        "uuid": "47c88b96-c87f-4980-8ab4-ad14f45c36a7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "flatten-array",
+        "name": "Flatten Array",
+        "uuid": "a9dd0e93-f34a-47dd-87d2-2e689f5f93f2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "hamming",
+        "name": "Hamming",
+        "uuid": "c7b1c12c-228d-4573-9e68-511b9d243e9b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "isogram",
+        "name": "Isogram",
+        "uuid": "fe577db6-0ebe-4c6a-9eb7-04407c7eb900",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "pangram",
+        "name": "Pangram",
+        "uuid": "385f681c-2b7d-4f32-9662-74b7aaac172b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "raindrops",
+        "name": "Raindrops",
+        "uuid": "b176d30a-4e4b-4d12-9331-67b03112b575",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "f8afa182-aca3-4464-96b7-9eb7f8d55449",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "c15ce044-1a62-45eb-86a2-079554cbd2c2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "resistor-color-expert",
+        "name": "Resistor Color Expert",
+        "uuid": "af806fda-62fa-4eaa-9b38-a1304a4aed61",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "bf63aff6-54bf-484a-b00d-9a038db249aa",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "reverse-string",
+        "name": "Reverse String",
+        "uuid": "963aeaed-a2d5-40e5-8f04-f17f404b5304",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "6684cbd6-5a15-4e1b-a41c-7f9d17884e7a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "triangle",
+        "name": "Triangle",
+        "uuid": "9762dd20-acef-4e3e-b304-8ae2a351d866",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
@@ -206,6 +238,14 @@
         "slug": "anagram",
         "name": "Anagram",
         "uuid": "70e71054-0af0-45c8-918e-b987d555ca78",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "luhn",
+        "name": "Luhn",
+        "uuid": "8f7a50ef-60fc-4e72-99de-c5dcf6ae2577",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
@@ -228,57 +268,17 @@
         "status": "deprecated"
       },
       {
-        "slug": "spiral-matrix",
-        "name": "Spiral Matrix",
-        "uuid": "7fbea4aa-0454-43a0-a189-4169b0f762e5",
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "5b341290-4baa-4e11-8b31-0b177a3b025d",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
       },
       {
-        "slug": "bob",
-        "name": "Bob",
-        "uuid": "c17ed683-e851-4b45-a4a7-f127dadb1b01",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "collatz-conjecture",
-        "name": "Collatz Conjecture",
-        "uuid": "00561d93-d636-4e44-9590-88de0e3eccc9",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "difference-of-squares",
-        "name": "Difference of Squares",
-        "uuid": "1065256b-5263-443f-9f67-28d0fa2e9b93",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "hamming",
-        "name": "Hamming",
-        "uuid": "c7b1c12c-228d-4573-9e68-511b9d243e9b",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "etl",
-        "name": "ETL",
-        "uuid": "47c88b96-c87f-4980-8ab4-ad14f45c36a7",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "matching-brackets",
-        "name": "Matching Brackets",
-        "uuid": "5b341290-4baa-4e11-8b31-0b177a3b025d",
+        "slug": "spiral-matrix",
+        "name": "Spiral Matrix",
+        "uuid": "7fbea4aa-0454-43a0-a189-4169b0f762e5",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
