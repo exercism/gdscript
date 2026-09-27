@@ -68,6 +68,31 @@ def get_cases(specs: pathlib.Path, exercise: pathlib.Path) -> list[dict]:
     return cases
 
 
+def filter_togdscript(obj) -> str:
+    """Filter `togdscript` that converts an arbitrary object to the GDScript version."""
+    if isinstance(obj, dict):
+        out = ", ".join("{filter_togdscript(k)}: {filter_togdscript(v)}" for k, v in data.items())
+        return "{" + out + "}"
+    if isinstance(obj, list):
+        out = ", ".join(filter_togdscript(i) for i in obj)
+        return f"[{out}]"
+    if obj is True:
+        return "true"
+    if obj is False:
+        return "false"
+    if obj is None:
+        return "null"
+    if isinstance(obj, (int, float)):
+        return f"{obj}"
+    if isinstance(obj, str):
+        if '"' not in obj:
+            return '"' + obj + '"'
+        if "'" not in obj:
+            return "'" + obj + "'"
+        return '"' + obj.replace('"', '\\"') + '"'
+    return TypeError(f"filter_togdscript for type {type(obj)} not supported")
+
+
 def filter_tojson(data, separators=(',', ':'), indent=None) -> str:
     """Filter `tojson` that JSON encodes a string with flexible settings."""
     return json.dumps(data, separators=separators, indent=indent)
@@ -80,6 +105,8 @@ def jinja_env(exercise: pathlib.Path) -> jinja2.Environment:
     env.filters["quote"] = shlex.quote
     # JSON formatting, default to compact form (`jq -c`).
     env.filters["tojson"] = filter_tojson
+    # GDScript
+    env.filters["togdscript"] = filter_togdscript
     # String escaping, ANSI-C style.
     env.filters["repr"] = repr
     # Return a dict with only specified keys kepts.
@@ -110,6 +137,8 @@ def generate(specs: pathlib.Path, exercise: pathlib.Path) -> None:
     for case in cases:
         case["expected"] = bool_to_str(case["expected"])
         case["func_name"] = re.sub("_+", "_", case["description"].lower().translate(translation))
+        if len(case.get("input", {}).values()) == 1:
+            case["given"] = list(case["input"].values())[0]
 
     data = {
         "cases": cases,
