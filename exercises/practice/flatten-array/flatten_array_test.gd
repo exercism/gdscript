@@ -52,7 +52,7 @@ func test_consecutive_null_values_in_the_middle_of_the_array_are_omitted_from_th
 	return [solution_script.flatten(inputs), expected]
 
 
-func test_6_level_nest_array_with_null_values(solution_script):
+func test_6_level_nested_array_with_null_values(solution_script):
 	var inputs = [0, 2, [[2, 3], 8, [[100]], null, [[null]]], -2]
 	var expected = [0, 2, 2, 3, 8, 100, -2]
 	return [solution_script.flatten(inputs), expected]
