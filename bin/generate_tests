@@ -71,7 +71,7 @@ def get_cases(specs: pathlib.Path, exercise: pathlib.Path) -> list[dict]:
 def filter_togdscript(obj) -> str:
     """Filter `togdscript` that converts an arbitrary object to the GDScript version."""
     if isinstance(obj, dict):
-        out = ", ".join("{filter_togdscript(k)}: {filter_togdscript(v)}" for k, v in data.items())
+        out = ", ".join(f"{filter_togdscript(k)}: {filter_togdscript(v)}" for k, v in obj.items())
         return "{" + out + "}"
     if isinstance(obj, list):
         out = ", ".join(filter_togdscript(i) for i in obj)
