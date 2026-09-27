@@ -1,0 +1,14 @@
+{% for case in cases %}
+func test_{{ case.func_name }}(solution_script):
+	var strand1 = {{ case.input.strand1 | togdscript }}
+	var strand2 = {{ case.input.strand2 | togdscript }}
+	var got = solution_script.{{ case.property }}(strand1, strand2)
+{%- if not case.expect_error %}
+	var want = {{ case.expected }}
+{%- else %}
+	var want = ERR_INVALID_PARAMETER
+{%- endif %}
+	return [got, want]
+
+{% endfor %}
+
