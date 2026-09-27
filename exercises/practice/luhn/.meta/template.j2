@@ -1,8 +1,15 @@
 {% for case in cases %}
 func test_{{ case["func_name"] }}(solution_script):
-	var got = solution_script.{{ case["property"] }}({{ case["input"]["value"] }})
+	solution_script.card_num = "{{ case["input"]["value"] }}"
+	var got = solution_script.{{ case["property"] }}()
 	var want = {{ case["expected"] }}
 	return [got, want]
 
 {% endfor %}
-
+func test_is_valid_can_be_called_repeatedly(solution_script):
+	# This test was added, because we saw many implementations
+	# in which the first call to valid() worked, but the
+	# second call failed.
+	solution_script.card_num = "055 444 285"
+	return [solution_script.valid(), true]
+	return [solution_script.valid(), true]
