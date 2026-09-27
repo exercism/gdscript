@@ -1,0 +1,7 @@
+{% for case in cases %}
+func test_{{ case.func_name }}(solution_script):
+	var expected = {{ case.expected | togdscript }}
+	var got = solution_script.{{ case.property | camel_to_snake }}()
+	return [got, expected]
+
+{% endfor %}
