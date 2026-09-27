@@ -266,6 +266,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
+      },
+      {
+        "slug": "etl",
+        "name": "ETL",
+        "uuid": "47c88b96-c87f-4980-8ab4-ad14f45c36a7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },
