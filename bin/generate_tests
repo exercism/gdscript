@@ -85,6 +85,7 @@ def filter_togdscript(obj) -> str:
     if isinstance(obj, (int, float)):
         return f"{obj}"
     if isinstance(obj, str):
+        obj = obj.replace("\\", "\\\\")
         if '"' not in obj:
             return '"' + obj + '"'
         if "'" not in obj:
