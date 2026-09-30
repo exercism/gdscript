@@ -1,8 +1,8 @@
 {% for case in cases %}
-func test_{{ case["func_name"] }}(solution_script):
-	solution_script.card_num = "{{ case["input"]["value"] }}"
-	var got = solution_script.{{ case["property"] }}()
-	var want = {{ case["expected"] }}
+func test_{{ case.func_name }}(solution_script):
+	solution_script.card_num = "{{ case.given }}"
+	var got = solution_script.{{ case.property }}()
+	var want = {{ case.expected }}
 	return [got, want]
 
 {% endfor %}
