@@ -1,40 +1,22 @@
 # Tests
 
-## Installing the Exercism GDScript track test runner
-
 You'll need [Godot installed][installation] correctly to use the test runner.
-
-To build and test GDScript scripts for Exercism, Godot will be run in "headless" mode from the CLI.
-These instructions currently require Linux and bash.
-
-### Step 1: Installing the overall test runner infrastructure
-
-To set up for testing, clone [https://github.com/exercism/gdscript-test-runner][gdscript-test-runner] and move its contents to `/opt/test-runner/`:
-
-```sh
-git clone https://github.com/exercism/gdscript-test-runner.git
-sudo mkdir -p /opt/
-sudo mv gdscript-test-runner/ /opt/test-runner/
-```
-
-### Step 2: Downloading the single-exercise test runner script
-
-Assuming you have the `exercism` tool set up and have downloaded at least one GDScript exercise, it should have created an `exercism/gdscript` folder to house the exercises.
-Save [the test runner][test-local-gdscript-solution] in this folder and mark the file executable, or just create a link to it:
-
-```sh
-cd ~/exercism/gdscript # replace with your exercism/gdscript directory
-ln /opt/test-runner/bin/test-local-gdscript-solution.sh
-```
 
 ## Running tests
 
-With the installation steps done, you should be able start from any exercise directory (e.g., `~/exercism/gdscript/two-fer`) and run the script (living one level up, in `../`) to test your local solution to that exercise:
+The [test runner][] is used to load and test solutions.
+To run the test runner, download it locally then use `godot` to run the test runner.
+In the future, the test runner will automatically be downloaded alongside exercises when using `exercism download`.
 
-```sh
-../test-local-gdscript-solution.sh
+```bash
+godot --headless -s /path/to/test_runner.gd -- <solution-slug> <path/to/solution>
 ```
 
+For example,
+
+```bash
+```
+
+
 [installation]: https://exercism.org/docs/tracks/gdscript/installation
-[gdscript-test-runner]: https://github.com/exercism/gdscript-test-runner
-[test-local-gdscript-solution]: https://raw.githubusercontent.com/exercism/gdscript-test-runner/refs/heads/main/bin/test-local-gdscript-solution.sh
+[test runner]: https://raw.githubusercontent.com/exercism/gdscript-test-runner/refs/heads/main/bin/test_runner.gd
