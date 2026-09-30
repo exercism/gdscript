@@ -1,0 +1,12 @@
+func _round(value):
+	return snappedf(value, 0.01)
+
+
+{% for case in cases %}
+func test_{{ case.func_name }}(solution_script):
+	var got = solution_script.on_planet({{ case.input.planet | togdscript }}, {{ case.input.seconds }})
+	var want = {{ case.expected }}
+	return [_round(got), _round(want)]
+
+{% endfor %}
+
