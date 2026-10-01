@@ -7,7 +7,9 @@
       "reverse_string.gd"
     ],
     "test": [
-      "reverse_string_test.gd"
+      "reverse_string_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

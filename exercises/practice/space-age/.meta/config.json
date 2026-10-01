@@ -7,7 +7,9 @@
       "space_age.gd"
     ],
     "test": [
-      "space_age_test.gd"
+      "space_age_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

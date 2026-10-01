@@ -7,7 +7,9 @@
       "raindrops.gd"
     ],
     "test": [
-      "raindrops_test.gd"
+      "raindrops_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

@@ -7,7 +7,9 @@
       "luhn.gd"
     ],
     "test": [
-      "luhn_test.gd"
+      "luhn_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

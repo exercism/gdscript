@@ -7,7 +7,9 @@
       "isogram.gd"
     ],
     "test": [
-      "isogram_test.gd"
+      "isogram_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

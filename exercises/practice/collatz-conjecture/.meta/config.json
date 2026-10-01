@@ -7,7 +7,9 @@
       "collatz_conjecture.gd"
     ],
     "test": [
-      "collatz_conjecture_test.gd"
+      "collatz_conjecture_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

@@ -7,7 +7,9 @@
       "resistor_color_trio.gd"
     ],
     "test": [
-      "resistor_color_trio_test.gd"
+      "resistor_color_trio_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

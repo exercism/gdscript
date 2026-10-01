@@ -7,7 +7,9 @@
       "darts.gd"
     ],
     "test": [
-      "darts_test.gd"
+      "darts_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

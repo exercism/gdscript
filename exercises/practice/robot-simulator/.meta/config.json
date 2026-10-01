@@ -10,7 +10,9 @@
       "robot_simulator.gd"
     ],
     "test": [
-      "robot_simulator_test.gd"
+      "robot_simulator_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

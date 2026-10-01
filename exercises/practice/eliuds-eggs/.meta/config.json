@@ -7,7 +7,9 @@
       "eliuds_eggs.gd"
     ],
     "test": [
-      "eliuds_eggs_test.gd"
+      "eliuds_eggs_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

@@ -7,7 +7,9 @@
       "armstrong_numbers.gd"
     ],
     "test": [
-      "armstrong_numbers_test.gd"
+      "armstrong_numbers_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

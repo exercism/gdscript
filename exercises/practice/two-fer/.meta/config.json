@@ -7,7 +7,9 @@
       "two_fer.gd"
     ],
     "test": [
-      "two_fer_test.gd"
+      "two_fer_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

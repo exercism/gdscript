@@ -7,7 +7,9 @@
       "binary_search.gd"
     ],
     "test": [
-      "binary_search_test.gd"
+      "binary_search_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"
