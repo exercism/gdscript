@@ -34,7 +34,7 @@ test_script_content() {
     # shellcheck disable=SC2016
     printf '[[ -f "${slug//-/_}_test.gd" ]] || die "Error! test file is missing"\n'
     # shellcheck disable=SC2016
-    printf 'exec godot --headless --script ./lib/test_runner.gd -- "${PWD}"\n'
+    printf 'exec godot --headless --script ./lib/test_runner.gd -- "${slug}" "${PWD}"\n'
 }
 
 write_test_runner () {
