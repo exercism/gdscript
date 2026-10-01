@@ -7,7 +7,9 @@
       "pangram.gd"
     ],
     "test": [
-      "pangram_test.gd"
+      "pangram_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

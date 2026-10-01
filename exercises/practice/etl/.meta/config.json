@@ -7,7 +7,9 @@
       "etl.gd"
     ],
     "test": [
-      "etl_test.gd"
+      "etl_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

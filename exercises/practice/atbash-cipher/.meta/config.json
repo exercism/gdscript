@@ -7,7 +7,9 @@
       "atbash_cipher.gd"
     ],
     "test": [
-      "atbash_cipher_test.gd"
+      "atbash_cipher_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

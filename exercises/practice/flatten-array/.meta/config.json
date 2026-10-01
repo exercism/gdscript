@@ -7,7 +7,9 @@
       "flatten_array.gd"
     ],
     "test": [
-      "flatten_array_test.gd"
+      "flatten_array_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

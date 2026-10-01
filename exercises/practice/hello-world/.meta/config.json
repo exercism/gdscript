@@ -10,7 +10,9 @@
       "hello_world.gd"
     ],
     "test": [
-      "hello_world_test.gd"
+      "hello_world_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

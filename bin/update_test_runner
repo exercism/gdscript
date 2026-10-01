@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+self=$(readlink -e "$0")
+bin=${self%/*}
+
+# shellcheck disable=SC1091
+. "${bin}/utils.bash"
+
+content=$(curl -s https://raw.githubusercontent.com/exercism/gdscript-test-runner/refs/heads/main/bin/test_runner.gd)
+readarray -t exercises < <( active_exercises )
+for exercise in "${exercises[@]}"; do
+    write_test_runner "${exercise}" "${content}"
+done

@@ -7,7 +7,9 @@
       "bob.gd"
     ],
     "test": [
-      "bob_test.gd"
+      "bob_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

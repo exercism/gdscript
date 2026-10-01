@@ -7,7 +7,9 @@
       "matching_brackets.gd"
     ],
     "test": [
-      "matching_brackets_test.gd"
+      "matching_brackets_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"

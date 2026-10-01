@@ -7,7 +7,9 @@
       "allergies.gd"
     ],
     "test": [
-      "allergies_test.gd"
+      "allergies_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
     ],
     "example": [
       ".meta/example.gd"
