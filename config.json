@@ -173,6 +173,14 @@
         "difficulty": 2
       },
       {
+        "slug": "phone-number",
+        "name": "Phone Number",
+        "uuid": "56086c2e-fc29-4bf2-810d-a3bfd9acb995",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "raindrops",
         "name": "Raindrops",
         "uuid": "b176d30a-4e4b-4d12-9331-67b03112b575",
