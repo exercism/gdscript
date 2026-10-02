@@ -1,0 +1,11 @@
+{% for case in cases %}
+func test_{{ case.property }}_{{ case.func_name }}(solution_script):
+{%- if not case.expect_error %}
+	var expected = {{ case.expected }}
+{%- else %}
+	var expected = null
+{%- endif %}
+	var got = solution_script.{{ case.property }}({{ case.input.series | togdscript }}, {{ case.input.sliceLength }})
+	return [got, expected]
+
+{% endfor %}
