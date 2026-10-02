@@ -270,6 +270,14 @@
         "status": "deprecated"
       },
       {
+        "slug": "food-chain",
+        "name": "Food Chain",
+        "uuid": "870dc9c6-9f44-4241-8cad-65c9bf7b24fd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "5b341290-4baa-4e11-8b31-0b177a3b025d",
