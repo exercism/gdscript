@@ -34,7 +34,7 @@ Support for mathematical functions (beyond `+` and `-`) for complex numbers can 
 Addition and subtraction operators behave as they do in normal math.
 If one or more of the operands is a `float`, the remaining `int`s will be converted to `float`s as well:
 
-```python
+```gdscript
 >>> 5 - 3
 2
 # The int is widened to a float here, and a float is returned.
@@ -46,7 +46,7 @@ If one or more of the operands is a `float`, the remaining `int`s will be conver
 
 As with addition and subtraction, multiplication will convert narrower numbers to match their less narrow counterparts:
 
-```python
+```gdscript
 >>> 3 * 2
 6
 
@@ -58,7 +58,7 @@ As with addition and subtraction, multiplication will convert narrower numbers t
 
 Division always returns a `float`, even if the result is a whole number:
 
-```python
+```gdscript
 >>> 6/5
 1.2
 
@@ -71,7 +71,7 @@ Division always returns a `float`, even if the result is a whole number:
 If an `int` result is needed, you can use floor division to truncate the result.
 Floor division is performed using the `//` operator:
 
-```python
+```gdscript
 >>> 6//5
 1
 
@@ -83,7 +83,7 @@ Floor division is performed using the `//` operator:
 
 The modulo operator (`%`) returns the remainder of the division of the two operands:
 
-```python
+```gdscript
 # The result of % is zero here, because dividing 8 by 2 leaves no remainder
 >>> 8 % 2
 0
@@ -95,7 +95,7 @@ The modulo operator (`%`) returns the remainder of the division of the two opera
 
 Another way to look at 5 % 3:
 
-```python
+```gdscript
 >>> whole_part = int(5/3)
 1
 
@@ -110,7 +110,7 @@ Another way to look at 5 % 3:
 
 Exponentiation is performed using the `**` operator:
 
-```python
+```gdscript
 >>> 2 ** 3
 8
 
@@ -122,7 +122,7 @@ Exponentiation is performed using the `**` operator:
 
 Numbers can be converted from `int` to `floats` and `floats` to `int` using the built-in functions `int()` and `float()`:
 
-```python
+```gdscript
 >>> int(3.45)
 3
 
@@ -135,7 +135,7 @@ Numbers can be converted from `int` to `floats` and `floats` to `int` using the 
 Python provides a built-in function [`round(<number>, <decimal_places>)`][round] to round off a floating point number to a given number of decimal places.
 If no number of decimal places is specified, the number is rounded off to the nearest integer and will return an `int`:
 
-```python
+```gdscript
 >>> round(3.1415926535, 2)
 3.14
 
@@ -148,7 +148,7 @@ If no number of decimal places is specified, the number is rounded off to the ne
 Python allows you to use parentheses to group expressions.
 This is useful when you want to override the default order of operations.
 
-```python
+```gdscript
 >>> 2 + 3 * 4
 14
 
@@ -159,7 +159,7 @@ This is useful when you want to override the default order of operations.
 Python follows the [PEMDAS][pemdas] rule for operator precedence.
 This means calculations within `()` have the highest priority, followed by `**`, then `*`, `/`, `//`, `%`, `+`, and `-`:
 
-```python
+```gdscript
 >>> 2 + 3 - 4 * 4
 -11
 
