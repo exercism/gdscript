@@ -318,6 +318,14 @@
         "difficulty": 4
       },
       {
+        "slug": "sieve",
+        "name": "Sieve",
+        "uuid": "cafb6983-d90c-4a4f-8836-87e7a8030346",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "spiral-matrix",
         "name": "Spiral Matrix",
         "uuid": "7fbea4aa-0454-43a0-a189-4169b0f762e5",
