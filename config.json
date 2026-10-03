@@ -332,6 +332,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
+      },
+      {
+        "slug": "sum-of-multiples",
+        "name": "Sum of Multiples",
+        "uuid": "796aa059-6f94-4a16-8c26-b05a086d166c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
