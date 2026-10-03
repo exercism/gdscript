@@ -9,4 +9,4 @@ func find(search_list, value):
 			low = middle + 1
 		else:
 			return middle
-	return false
+	return null
