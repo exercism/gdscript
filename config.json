@@ -318,6 +318,14 @@
         "difficulty": 4
       },
       {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "f2b5bfc1-420b-47a3-9955-a8a9a85b76a5",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "sieve",
         "name": "Sieve",
         "uuid": "cafb6983-d90c-4a4f-8836-87e7a8030346",
