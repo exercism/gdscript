@@ -132,7 +132,7 @@ Numbers can be converted from `int` to `floats` and `floats` to `int` using the 
 
 ## Round
 
-Python provides a built-in function [`round(<number>, <decimal_places>)`][round] to round off a floating point number to a given number of decimal places.
+GDScript provides a built-in function [`round(<number>, <decimal_places>)`][round] to round off a floating point number to a given number of decimal places.
 If no number of decimal places is specified, the number is rounded off to the nearest integer and will return an `int`:
 
 ```gdscript
@@ -145,7 +145,7 @@ If no number of decimal places is specified, the number is rounded off to the ne
 
 ## Priority and parentheses
 
-Python allows you to use parentheses to group expressions.
+GDScript allows you to use parentheses to group expressions.
 This is useful when you want to override the default order of operations.
 
 ```gdscript
@@ -156,7 +156,7 @@ This is useful when you want to override the default order of operations.
 20
 ```
 
-Python follows the [PEMDAS][pemdas] rule for operator precedence.
+GDScript follows the [PEMDAS][pemdas] rule for operator precedence.
 This means calculations within `()` have the highest priority, followed by `**`, then `*`, `/`, `//`, `%`, `+`, and `-`:
 
 ```gdscript
@@ -174,26 +174,26 @@ This means calculations within `()` have the highest priority, followed by `**`,
 
 ## Precision & Representation
 
-Integers in Python have [arbitrary precision][arbitrary-precision] -- the number of digits is limited only by the available memory of the host system.
+Integers in GDScript have [arbitrary precision][arbitrary-precision] -- the number of digits is limited only by the available memory of the host system.
 
 Floating point numbers are usually implemented using a `double` in C (_15 decimal places of precision_), but will vary in representation based on the host system.
 Complex numbers have a `real` and an `imaginary` part, both of which are represented by floating point numbers.
 
-For a more detailed discussions of the issues and limitations of floating point arithmetic across programming languages, take a look at [0.30000000000000004.com][0.30000000000000004.com] and [The Python Tutorial][floating point math].
+For a more detailed discussions of the issues and limitations of floating point arithmetic across programming languages, take a look at [0.30000000000000004.com][0.30000000000000004.com] and [The GDScript Tutorial][floating point math].
 
 [0.30000000000000004.com]: https://0.30000000000000004.com/
 [arbitrary-precision]: https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic
-[arithmetic-operations]: https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex
-[bin]: https://docs.python.org/3/library/functions.html#bin
-[cmath]: https://docs.python.org/3.9/library/cmath.html
-[decimals]: https://docs.python.org/3/library/decimal.html#module-decimal
+[arithmetic-operations]: https://docs.GDScript.org/3/library/stdtypes.html#numeric-types-int-float-complex
+[bin]: https://docs.GDScript.org/3/library/functions.html#bin
+[cmath]: https://docs.GDScript.org/3.9/library/cmath.html
+[decimals]: https://docs.GDScript.org/3/library/decimal.html#module-decimal
 [float]: https://docs.godotengine.org/en/stable/classes/class_float.html#class-float
-[floating point math]: https://docs.python.org/3.9/tutorial/floatingpoint.html
-[fractions]: https://docs.python.org/3/library/fractions.html
-[hex]: https://docs.python.org/3/library/functions.html#hex
+[floating point math]: https://docs.GDScript.org/3.9/tutorial/floatingpoint.html
+[fractions]: https://docs.GDScript.org/3/library/fractions.html
+[hex]: https://docs.GDScript.org/3/library/functions.html#hex
 [int]: https://docs.godotengine.org/en/stable/classes/class_int.html#int
-[oct]: https://docs.python.org/3/library/functions.html#oct
-[operator precedence]: https://docs.python.org/3/reference/expressions.html#operator-precedence
+[oct]: https://docs.GDScript.org/3/library/functions.html#oct
+[operator precedence]: https://docs.GDScript.org/3/reference/expressions.html#operator-precedence
 [pemdas]: https://mathworld.wolfram.com/PEMDAS.html
-[round]: https://docs.python.org/3/library/functions.html#round
+[round]: https://docs.GDScript.org/3/library/functions.html#round
 [vector]: https://docs.godotengine.org/en/stable/classes/class_vector2.html#class-vector2
