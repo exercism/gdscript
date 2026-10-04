@@ -14,5 +14,7 @@ var orbital_periods = {
 
 
 func on_planet(planet, seconds):
-	var ratio = orbital_periods.get(planet)
+	if planet not in orbital_periods:
+		return null
+	var ratio = orbital_periods[planet]
 	return seconds / EARTH_SECONDS / ratio
