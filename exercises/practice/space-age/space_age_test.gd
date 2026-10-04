@@ -49,3 +49,9 @@ func test_age_on_neptune(solution_script):
 	var got = solution_script.on_planet("Neptune", 1821023456)
 	var want = 0.35
 	return [_round(got), _round(want)]
+
+
+func test_invalid_planet_causes_error(solution_script):
+	var got = solution_script.on_planet("Sun", 680804807)
+	var want = null
+	return [got, want]
