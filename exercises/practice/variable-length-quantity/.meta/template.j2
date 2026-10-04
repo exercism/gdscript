@@ -1,0 +1,13 @@
+{% for case in cases %}
+func test_{{ case.func_name }}(solution_script):
+{%- if not case.expect_error %}
+	var want = {{ case.expected }}
+{% else %}
+	var want = null
+{% endif %}
+	var input = {{ case.given | togdscript }}
+	var got = solution_script.{{ case.property | camel_to_snake }}(input)
+	return [got, want]
+
+{% endfor %}
+
