@@ -358,6 +358,14 @@
         "difficulty": 4
       },
       {
+        "slug": "prism",
+        "name": "Prism",
+        "uuid": "3f3f1488-90bf-44a3-b107-2ecfa4147941",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "series",
         "name": "Series",
         "uuid": "9318f59e-74fc-4bc3-9ac6-59e35beafff8",
