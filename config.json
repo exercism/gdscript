@@ -310,6 +310,14 @@
         "difficulty": 4
       },
       {
+        "slug": "prime-factors",
+        "name": "Prime Factors",
+        "uuid": "4574ba46-a404-4d48-af8b-abc7cd200187",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "36ace4af-c2e3-4685-ae41-74e14f3605f2",
