@@ -1,25 +1,19 @@
 @export var position : Vector2i
-@export var direction : String
+@export var direction : Vector2i
 
 
-var allowed_directions = ["north", "east", "south", "west"]
+var allowed_directions = [Vector2i.DOWN, Vector2i.RIGHT, Vector2i.UP, Vector2i.LEFT]
 
 
 func move(instructions: String):
 	for instruction in instructions:
-		match [instruction, direction]:
-			["L", _]:
+		match instruction:
+			"L":
 				var index = allowed_directions.find(direction) - 1
 				direction = allowed_directions[index]
-			["R", _]:
+			"R":
 				var index = allowed_directions.find(direction)
 				index = (index + 1) % 4
 				direction = allowed_directions[index]
-			["A", "north"]:
-				position += Vector2i(0, 1)
-			["A", "south"]:
-				position += Vector2i(0, -1)
-			["A", "east"]:
-				position += Vector2i(1, 0)
-			["A", "west"]:
-				position += Vector2i(-1, 0)
+			"A":
+				position += direction
