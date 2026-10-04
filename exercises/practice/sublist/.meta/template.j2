@@ -1,0 +1,10 @@
+{% for case in cases %}
+func test_{{ case.func_name }}(solution_script):
+	var want = {{ case.expected | togdscript }}
+	var list_one = {{ case.input.listOne | togdscript }}
+	var list_two = {{ case.input.listTwo | togdscript }}
+	var got = solution_script.{{ case.property }}(list_one, list_two)
+	return [got, want]
+
+{% endfor %}
+
