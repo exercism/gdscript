@@ -1,0 +1,16 @@
+{% for case in cases %}
+func test_{{ case.func_name }}(solution_script):
+{%- if not case.expect_error %}
+	var want = {
+		"moves": {{ case.expected.moves }},
+		"goal_bucket": {{ case.expected.goalBucket | togdscript }},
+		"other_bucket": {{ case.expected.otherBucket }},
+	}
+{%- else %}
+	var want = null
+{%- endif %}
+	var got = solution_script.{{ case.property }}({{ case.input.bucketOne }}, {{ case.input.bucketTwo }}, {{ case.input.goal }}, {{ case.input.startBucket | togdscript }})
+	return [got, want]
+
+{% endfor %}
+
