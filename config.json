@@ -358,6 +358,14 @@
         "difficulty": 4
       },
       {
+        "slug": "camicia",
+        "name": "Camicia",
+        "uuid": "54146929-8c06-4377-85cc-a13319583241",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "prism",
         "name": "Prism",
         "uuid": "3f3f1488-90bf-44a3-b107-2ecfa4147941",
