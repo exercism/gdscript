@@ -25,7 +25,8 @@
     "test": [
       "%{snake_slug}_test.gd",
       "run_tests",
-      "lib/test_runner.gd"
+      "lib/test_runner.gd",
+      "project.godot"
     ],
     "example": [
       ".meta/example.gd"

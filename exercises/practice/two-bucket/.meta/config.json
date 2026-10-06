@@ -9,7 +9,8 @@
     "test": [
       "two_bucket_test.gd",
       "run_tests",
-      "lib/test_runner.gd"
+      "lib/test_runner.gd",
+      "project.godot"
     ],
     "example": [
       ".meta/example.gd"

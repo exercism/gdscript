@@ -24,6 +24,24 @@ active_exercises () {
     ' "${REPO_ROOT}/config.json"
 }
 
+name() {
+    local slug="$1"
+    jq -r --arg slug "${slug}" '
+        .exercises |
+        to_entries |
+        map(
+            .key as $key |
+            .value |
+            map(
+                select(.slug == $slug)
+                .name
+            )
+        ) |
+        flatten |
+        .[0]
+    ' "${REPO_ROOT}/config.json"
+}
+
 test_script_content() {
     printf '#!/usr/bin/env bash\n'
     printf '\n'
@@ -35,6 +53,19 @@ test_script_content() {
     printf '[[ -f "${slug//-/_}_test.gd" ]] || die "Error! test file is missing"\n'
     # shellcheck disable=SC2016
     printf 'exec godot --headless --script ./lib/test_runner.gd -- "${slug}" "${PWD}"\n'
+}
+
+write_project_file() {
+    local exercise="$1"
+    local slug="${exercise##*/}"
+    local name
+    name=$(name "${slug}")
+    {
+        printf 'config_version=5\n\n'
+        printf '[application]\n'
+        printf 'config/name="Exercism - %s"\n' "$name"
+        printf 'config/features=PackedStringArray("4.7")\n'
+    } > "${exercise}/project.godot"
 }
 
 write_test_runner () {

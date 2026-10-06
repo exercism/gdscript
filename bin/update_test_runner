@@ -10,4 +10,5 @@ content=$(curl -s https://raw.githubusercontent.com/exercism/gdscript-test-runne
 readarray -t exercises < <( active_exercises )
 for exercise in "${exercises[@]}"; do
     write_test_runner "${exercise}" "${content}"
+    write_project_file "${exercise}"
 done
