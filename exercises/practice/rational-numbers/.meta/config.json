@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "IsaacG"
+  ],
+  "files": {
+    "solution": [
+      "rational_numbers.gd"
+    ],
+    "test": [
+      "rational_numbers_test.gd",
+      "run_tests",
+      "lib/test_runner.gd"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Implement rational numbers.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Rational_number"
+}
