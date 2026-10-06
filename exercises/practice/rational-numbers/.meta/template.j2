@@ -1,0 +1,38 @@
+func equals(r1, r2) -> bool:
+	r1 = r1.reduce()
+	r2 = r2.reduce()
+	return r1.numer == r2.numer and r1.denom == r2.denom
+
+{% for case in cases %}
+func test_{{ case.func_name }}(solution_script):
+{%- for name, val in case.input.items() %}
+{%- if name == "r1" %}
+	var rational_one = solution_script.Rational.new({{ val[0] }}, {{ val[1] }})
+{%- elif name == "r2" %}
+	var rational_two = solution_script.Rational.new({{ val[0] }}, {{ val[1] }})
+{%- elif name == "r" %}
+	var rational = solution_script.Rational.new({{ val[0] }}, {{ val[1] }})
+{%- elif name == "n" or name == "x" %}
+	var integer = {{ val }}
+{%- endif %}
+{%- endfor %}
+{%- if case.property == "expreal" %}
+	var want = {{ case.expected }}
+{%- else %}
+	var want = solution_script.Rational.new({{ case.expected[0] }}, {{ case.expected[1] }})
+{%- endif %}
+{%- if case.property in ["add", "sub", "mul", "div" ] %}
+	var got = rational_one.{{ case.property }}(rational_two)
+{%- elif case.property in ["abs", "reduce"] %}
+	var got = rational.{{ case.property }}()
+{%- elif case.property in ["exprational", "expreal"] %}
+	var got = rational.{{ case.property }}(integer)
+{%- endif %}
+{%- if case.property == "expreal" %}
+	return [is_equal_approx(got, want), true]
+{%- else %}
+	return [equals(got, want), true]
+{%- endif %}
+
+{% endfor %}
+
