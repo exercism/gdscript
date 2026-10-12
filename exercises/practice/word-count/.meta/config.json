@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "IsaacG"
+  ],
+  "files": {
+    "solution": [
+      "word_count.gd"
+    ],
+    "test": [
+      "word_count_test.gd",
+      "run_tests",
+      "lib/test_runner.gd",
+      "project.godot"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
+  "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour."
+}
