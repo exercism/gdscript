@@ -359,6 +359,14 @@
         "difficulty": 4
       },
       {
+        "slug": "word-count",
+        "name": "Word Count",
+        "uuid": "87efce91-c541-4676-9d97-56b84784589c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "camicia",
         "name": "Camicia",
         "uuid": "54146929-8c06-4377-85cc-a13319583241",
