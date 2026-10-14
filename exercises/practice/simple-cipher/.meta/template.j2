@@ -1,0 +1,32 @@
+func test_random_key_cipher_can_encode(solution_script):
+	var cipher = solution_script.Cipher.new()
+	var plaintext = "aaaaaaaaaa"
+	var got = cipher.encode(plaintext)
+	var want = cipher.key.substr(0, len(plaintext))
+	return [got, want]
+
+
+func test_random_key_cipher_can_decode(solution_script):
+	var cipher = solution_script.Cipher.new()
+	var want = "aaaaaaaaaa"
+	var got = cipher.decode(cipher.key.substr(0, len(want)))
+	return [got, want]
+
+
+func test_key_is_made_only_of_lowercase_letters(solution_script):
+	var cipher = solution_script.Cipher.new()
+	var is_lowercase = true
+	var letters = "abcdefghijklmnopqrstuvwxyz"
+	for char in cipher.key:
+		if char not in letters:
+			is_lowercase = false
+	return [is_lowercase, true]
+
+{% for case in cases %}{% if case.descriptions[0] == "Substitution cipher" and case.input.keys() | length == 2 %}
+func test_{{ case.func_name }}(solution_script):
+	var got = solution_script.Cipher.new({{ case.input.key | togdscript }}).{{ case.property | camel_to_snake }}({{ (case.input.plaintext or case.input.ciphertext) | togdscript }})
+	var want = {{ case.expected | togdscript }}
+	return [got, want]
+
+{% endif %}{% endfor %}
+
