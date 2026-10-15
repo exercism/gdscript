@@ -397,9 +397,33 @@ class Runner:
 		self.result_writer.write(results)
 
 
-func load_script(solution_script_path: String) -> Object:
+func load_solution(path: String) -> Object:
 	"""Load a script. This helper is needed to catch failures without aborting the error handling."""
-	return load(solution_script_path).new()
+	if not FileAccess.file_exists(path):
+		return null
+	var re = RegEx.create_from_string("^(    )+")
+	var replace = RegEx.create_from_string("(    )+")
+	var changed = false
+	var lines = []
+	for line in FileAccess.open(path, FileAccess.READ).get_as_text().split("\n"):
+		var m = re.search(line)
+		if m == null:
+			lines.append(line)
+		else:
+			changed = true
+			var new = []
+			for i in range(m.get_end() / 4):
+				new.append("\t")
+			new.append(line.substr(m.get_end()))
+			lines.append("".join(new))
+	if not changed:
+		return load(path).new()
+
+	path = OS.get_temp_dir() + "/solution.gd"
+	FileAccess.open(path, FileAccess.WRITE).store_string("\n".join(lines))
+	var solution = load(path).new()
+	DirAccess.remove_absolute(path)
+	return solution
 
 
 func load_solution_script(solution_script_path: String, result_writer: ResultWriter, stderr: ErrorReader) -> Array:
@@ -409,7 +433,7 @@ func load_solution_script(solution_script_path: String, result_writer: ResultWri
 	"""
 	# Make sure the STDERR file is empty.
 	stderr.get_error_message()
-	var solution_script = load_script(solution_script_path)
+	var solution_script = load_solution(solution_script_path)
 
 	if solution_script == null:
 		var message: String = "The solution file could not be parsed."
