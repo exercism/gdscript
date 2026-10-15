@@ -1,10 +1,10 @@
 {% for case in cases %}
-func test_{{ case["func_name"] }}(solution_script):
-{%- if case["property"] == "colorCode" %}
-	return [solution_script.{{ case["property"] | camel_to_snake }}({{ case["input"]["color"] | togdscript }}), {{ case["expected"] }}]
+func test_{{ case.func_name }}(solution_script):
+{%- if case.property == "colorCode" %}
+	return [solution_script.{{ case.property | camel_to_snake }}({{ case.input.color | togdscript }}), {{ case.expected }}]
 
 {%- endif %}
-{%- if case["property"] == "colors" %}
+{%- if case.property == "colors" %}
 	var colors = [
 		"black",
 		"brown",
@@ -17,6 +17,6 @@ func test_{{ case["func_name"] }}(solution_script):
 		"grey",
 		"white"
 	]
-	return [solution_script.{{ case["property"] }}(), colors]
+	return [solution_script.{{ case.property }}(), colors]
 {%- endif %}
 {% endfor %}
