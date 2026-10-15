@@ -1,4 +1,4 @@
-func color_code(colors):
+func resistor_label(colors):
 	var size = colors.size()
 	if size == 1: return "0 ohms"
 	
