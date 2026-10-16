@@ -5,18 +5,7 @@ func test_{{ case.func_name }}(solution_script):
 
 {%- endif %}
 {%- if case.property == "colors" %}
-	var colors = [
-		"black",
-		"brown",
-		"red",
-		"orange",
-		"yellow",
-		"green",
-		"blue",
-		"violet",
-		"grey",
-		"white"
-	]
+	var colors = {{ case.expected | togdscript }}
 	return [solution_script.{{ case.property }}(), colors]
 {%- endif %}
 {% endfor %}
