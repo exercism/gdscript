@@ -1,4 +1,4 @@
-func color_code(colors):
+func label(colors):
 	var colors_code = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"]
 
 	var units = {

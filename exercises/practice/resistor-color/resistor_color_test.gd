@@ -1,14 +1,11 @@
-func test_color_codes_black(solution_script):
+func test_black(solution_script):
 	return [solution_script.color_code("black"), 0]
 
-
-func test_color_codes_white(solution_script):
+func test_white(solution_script):
 	return [solution_script.color_code("white"), 9]
 
-
-func test_color_codes_orange(solution_script):
+func test_orange(solution_script):
 	return [solution_script.color_code("orange"), 3]
-
 
 func test_colors(solution_script):
 	var colors = [

@@ -12,7 +12,7 @@ const COLORS = [
 ]
 
 
-func color_code(colors):
+func value(colors):
 	var tens = colors[0]
 	var ones = colors[1]
 	return COLORS.find(tens) * 10 + COLORS.find(ones)

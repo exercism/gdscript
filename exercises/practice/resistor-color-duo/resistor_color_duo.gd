@@ -1,2 +1,2 @@
-func color_code(colors):
+func value(colors):
 	pass
