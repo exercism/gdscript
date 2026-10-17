@@ -1,21 +1,23 @@
-# Instructions
+# Description
 
 In this exercise, you are going to create a helpful program so that you don't have to remember the values of the bands.
 The program will take 1, 4, or 5 colors as input, and outputs the correct value, in ohms.
 The color bands are encoded as follows:
 
-- Black: 0
-- Brown: 1
-- Red: 2
-- Orange: 3
-- Yellow: 4
-- Green: 5
-- Blue: 6
-- Violet: 7
-- Grey: 8
-- White: 9
+| Color  | Value |
+| ------ | ----- |
+| Black  | 0     |
+| Brown  | 1     |
+| Red    | 2     |
+| Orange | 3     |
+| Yellow | 4     |
+| Green  | 5     |
+| Blue   | 6     |
+| Violet | 7     |
+| Gray   | 8     |
+| White  | 9     |
 
-In `resistor-color trio` you decoded the first three colors.
+In [`Resistor Color Trio`][resistor-color-trio-exercise] you decoded the first three colors.
 For instance: orange-orange-brown translated to the main value `330`.
 In this exercise you will need to add _tolerance_ to the mix.
 Tolerance is the maximum amount that a value can be above or below the main value.
@@ -23,14 +25,16 @@ For example, if the last band is green, the maximum tolerance will be ±0.5%.
 
 The tolerance band will have one of these values:
 
-- Grey - 0.05%
-- Violet - 0.1%
-- Blue - 0.25%
-- Green - 0.5%
-- Brown - 1%
-- Red - 2%
-- Gold - 5%
-- Silver - 10%
+| Color  | Tolerance |
+| ------ | --------: |
+| Grey   |    ±0.05% |
+| Violet |    ±0.10% |
+| Blue   |    ±0.25% |
+| Green  |    ±0.50% |
+| Brown  |    ±1.00% |
+| Red    |    ±2.00% |
+| Gold   |    ±5.00% |
+| Silver |   ±10.00% |
 
 The four-band resistor is built up like this:
 
@@ -77,3 +81,5 @@ When there are more than a million ohms, we say "megaohms".
 So an input of "orange", "orange", "blue", "red" should return:
 
 "33 megaohms ±2%"
+
+[resistor-color-trio-exercise]: https://exercism.org/tracks/gdscript/exercises/resistor-color-trio
