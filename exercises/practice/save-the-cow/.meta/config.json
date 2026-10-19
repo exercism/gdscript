@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "IsaacG"
+  ],
+  "files": {
+    "solution": [
+      "save_the_cow.gd"
+    ],
+    "test": [
+      "save_the_cow_test.gd",
+      "run_tests",
+      "lib/test_runner.gd",
+      "project.godot"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Implement a word-guessing game."
+}
