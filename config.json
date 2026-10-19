@@ -479,6 +479,14 @@
         "difficulty": 6
       },
       {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "8ef12214-a6ed-4ea7-8300-db7bb7ce340f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "slug": "swift-scheduling",
         "name": "Swift Scheduling",
         "uuid": "1708d1f2-f588-43f0-a247-8072efcff288",
