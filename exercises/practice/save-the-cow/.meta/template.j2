@@ -1,0 +1,23 @@
+{% for case in cases %}
+{%- if not case.expect_error %}{% for prop, val in case.expected.items() %}
+func test_{{ case.func_name }}__{{ prop | camel_to_snake }}(solution_script):
+	var game = solution_script.SaveTheCow.new({{ case.input.word | togdscript }})
+	for letter in {{ case.input.guesses | togdscript }}:
+		game.guess(letter)
+		if game.error != null:
+			return [game.error, null]
+	return [game.{{ prop | camel_to_snake }}, {{ val | togdscript }}]
+
+{% endfor %}
+{%- else %}
+func test_{{ case.func_name }}__error(solution_script):
+	var game = solution_script.SaveTheCow.new({{ case.input.word | togdscript }})
+	for letter in {{ case.input.guesses[:-1] | togdscript }}:
+		game.guess(letter)
+		if game.error != null:
+			return [game.error, null]
+	game.guess({{ case.input.guesses[-1] | togdscript }})
+	return [game.error, {{ case.expect_error_msg | togdscript }}]
+
+{% endif %}
+{%- endfor %}
