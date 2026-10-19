@@ -1,0 +1,2 @@
+func solve(puzzle):
+	pass
