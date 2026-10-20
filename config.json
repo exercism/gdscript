@@ -303,6 +303,14 @@
         "difficulty": 4
       },
       {
+        "slug": "gigasecond",
+        "name": "Gigasecond",
+        "uuid": "870ffa4c-b265-4be7-9f27-e7c34a7bc175",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "5b341290-4baa-4e11-8b31-0b177a3b025d",

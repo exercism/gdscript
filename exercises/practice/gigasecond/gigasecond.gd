@@ -1,0 +1,2 @@
+func add(time):
+	pass
