@@ -423,6 +423,14 @@
         "difficulty": 5
       },
       {
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "12b85347-80c9-4a74-ae1d-258bb1a92f24",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "prism",
         "name": "Prism",
         "uuid": "3f3f1488-90bf-44a3-b107-2ecfa4147941",
