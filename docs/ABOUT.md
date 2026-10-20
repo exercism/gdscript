@@ -12,7 +12,7 @@ If you're already interested in Godot and not sure which of its supported langua
 If you're curious why Godot created their own language, you can read more at [What were the motivations behind creating GDScript?][why-create-gdscript].
 
 [godot-engine]: https://godotengine.org/
-[color]: https://docs.godotengine.org/en/stable/classes/class_plane.html
+[color]: https://docs.godotengine.org/en/stable/classes/class_color.html
 [plane]: https://docs.godotengine.org/en/stable/classes/class_plane.html
 [transform2d]: https://docs.godotengine.org/en/stable/classes/class_transform2d.html
 [why-use-gdscript]: https://docs.godotengine.org/en/stable/about/faq.html#what-is-gdscript-and-why-should-i-use-it
