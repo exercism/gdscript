@@ -1,0 +1,26 @@
+{%- macro node(item) %}
+{%- if item == None %}null
+{%- else %}solution_script.TreeNode.new({{ item.data }}, {{ node(item.left) }}, {{ node(item.right) }})
+{%- endif %}
+{%- endmacro %}
+func equal(a, b):
+	if a == null and b == null:
+		return true
+	if a == null or b == null:
+		return false
+	return a.datum == b.datum and equal(a.left, b.left) and equal(a.right, b.right)
+
+{% for case in cases %}
+func test_{{ case.func_name }}(solution_script):
+	var bst = solution_script.BinarySearchTree.new({{ case.given | togdscript | replace('"', '') }})
+	var got = bst.{{ case.property | camel_to_snake }}()
+{%- if case.property == "data" %}
+	var want = {{ node(case.expected) }}
+	return [equal(got, want), true]
+{%- else %}
+	var want = {{ case.expected | togdscript | replace('"', '') }}
+	return [got, want]
+{%- endif %}
+
+{% endfor %}
+
