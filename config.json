@@ -198,30 +198,6 @@
         "difficulty": 2
       },
       {
-        "slug": "resistor-color-duo",
-        "name": "Resistor Color Duo",
-        "uuid": "c15ce044-1a62-45eb-86a2-079554cbd2c2",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "resistor-color-expert",
-        "name": "Resistor Color Expert",
-        "uuid": "af806fda-62fa-4eaa-9b38-a1304a4aed61",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "resistor-color-trio",
-        "name": "Resistor Color Trio",
-        "uuid": "bf63aff6-54bf-484a-b00d-9a038db249aa",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
         "slug": "reverse-string",
         "name": "Reverse String",
         "uuid": "963aeaed-a2d5-40e5-8f04-f17f404b5304",
@@ -265,6 +241,14 @@
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "8f7a50ef-60fc-4e72-99de-c5dcf6ae2577",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "c15ce044-1a62-45eb-86a2-079554cbd2c2",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
@@ -338,6 +322,14 @@
         "slug": "protein-translation",
         "name": "Protein Translation",
         "uuid": "58694c40-964d-4d0d-89e8-45911d579b28",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "bf63aff6-54bf-484a-b00d-9a038db249aa",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
@@ -442,6 +434,23 @@
         "slug": "rational-numbers",
         "name": "Rational Numbers",
         "uuid": "fdc9d068-bc60-423d-be4a-2e4999078cf1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "resistor-color-expert",
+        "name": "Resistor Color Expert",
+        "uuid": "af806fda-62fa-4eaa-9b38-a1304a4aed61",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "status": "deprecated"
+      },
+      {
+        "slug": "resistor-color-tolerance",
+        "name": "Resistor Color Tolerance",
+        "uuid": "265eb5ac-529d-4252-a203-3b9a4bbb7ef8",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
