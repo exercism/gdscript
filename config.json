@@ -287,6 +287,14 @@
         "status": "deprecated"
       },
       {
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "4beb1f31-ba3a-4fc1-acd9-c725f524953c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "food-chain",
         "name": "Food Chain",
         "uuid": "870dc9c6-9f44-4241-8cad-65c9bf7b24fd",

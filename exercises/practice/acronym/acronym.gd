@@ -1,0 +1,2 @@
+func abbreviate(words):
+	pass
