@@ -439,6 +439,14 @@
         "difficulty": 5
       },
       {
+        "slug": "binary-search-tree",
+        "name": "Binary Search Tree",
+        "uuid": "61729450-b90b-4805-8796-da3930483f82",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "slug": "swift-scheduling",
         "name": "Swift Scheduling",
         "uuid": "1708d1f2-f588-43f0-a247-8072efcff288",

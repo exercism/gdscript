@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "IsaacG"
+  ],
+  "files": {
+    "solution": [
+      "binary_search_tree.gd"
+    ],
+    "test": [
+      "binary_search_tree_test.gd",
+      "run_tests",
+      "lib/test_runner.gd",
+      "project.godot"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Insert and search for numbers in a binary tree.",
+  "source": "Josh Cheek"
+}
