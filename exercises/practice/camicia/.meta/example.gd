@@ -56,8 +56,13 @@ func values(cards: Array) -> Array[int]:
 
 func value(card: String) -> int:
 	match card:
-		"J": return 1
-		"Q": return 2
-		"K": return 3
-		"A": return 4
-		_:   return 0
+		"J":
+			return 1
+		"Q":
+			return 2
+		"K":
+			return 3
+		"A":
+			return 4
+		_:
+			return 0

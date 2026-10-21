@@ -9,7 +9,7 @@ class SaveTheCow:
 		self._word = word
 		for i in range(len(self._word)):
 			masked_word += "_"
-	
+
 	func guess(letter):
 		if self.state == "Win":
 			self.error = "cannot guess after the game is won"

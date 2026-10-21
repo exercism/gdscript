@@ -36,4 +36,3 @@ func decode(encoded: Array):
 			decoded.append(num)
 			num = 0
 	return decoded
-

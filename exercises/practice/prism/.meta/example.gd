@@ -28,7 +28,7 @@ func next_hit(position, angle, prisms):
 				continue
 			if hit == null or position.distance_to(prism[1]) < dist:
 				hit = prism
-				dist = position.distance_to(prism[1]) 
+				dist = position.distance_to(prism[1])
 	return hit
 
 

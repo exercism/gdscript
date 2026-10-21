@@ -12,4 +12,3 @@ func classify(number: int):
 		return "abundant"
 	else:
 		return "deficient"
-

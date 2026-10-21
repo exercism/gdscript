@@ -1,5 +1,6 @@
 const QUARTERS = [[0, 4], [0, 7], [0, 10], [1, 1]]
 
+
 func delivery_date(start: String, description: String):
 	var now_details = Time.get_datetime_dict_from_datetime_string(start, true)
 	var now_ts = Time.get_unix_time_from_datetime_string(start)
@@ -21,7 +22,10 @@ func delivery_date(start: String, description: String):
 	elif description == "EOW":
 		# EOW Monday, Tuesday, Wednesday => Friday at 17:00
 		# EOW Thursday or Friday         => Sunday at 20:00
-		if now_details["weekday"] in [Time.WEEKDAY_MONDAY, Time.WEEKDAY_TUESDAY, Time.WEEKDAY_WEDNESDAY]:
+		if (
+			now_details["weekday"]
+			in [Time.WEEKDAY_MONDAY, Time.WEEKDAY_TUESDAY, Time.WEEKDAY_WEDNESDAY]
+		):
 			now_details["hour"] = 17
 			offset = 24 * 60 * 60 * (Time.WEEKDAY_FRIDAY - now_details["weekday"])
 		else:
@@ -40,9 +44,11 @@ func delivery_date(start: String, description: String):
 		now_details["hour"] = 8
 		now_details["minute"] = 0
 		now_details["second"] = 0
-			
+
 		# Ensure it is not a weekend -- compute day of week and roll forward to Monday.
-		now_details = Time.get_datetime_dict_from_unix_time(Time.get_unix_time_from_datetime_dict(now_details))
+		now_details = Time.get_datetime_dict_from_unix_time(
+			Time.get_unix_time_from_datetime_dict(now_details)
+		)
 		if now_details["weekday"] == Time.WEEKDAY_SATURDAY:
 			offset += 24 * 60 * 60 * 2
 		elif now_details["weekday"] == Time.WEEKDAY_SUNDAY:
@@ -56,8 +62,17 @@ func delivery_date(start: String, description: String):
 		var month = QUARTERS[quarter - 1][1]
 		if current > quarter:
 			year_offset = 1
-		now_details = {"year": now_details["year"] + year_offset, "month": month, "day": 1, "hour": 8, "minute": 0, "second": 0}
-		now_details = Time.get_datetime_dict_from_unix_time(Time.get_unix_time_from_datetime_dict(now_details) - 24 * 60 * 60 * 1)
+		now_details = {
+			"year": now_details["year"] + year_offset,
+			"month": month,
+			"day": 1,
+			"hour": 8,
+			"minute": 0,
+			"second": 0
+		}
+		now_details = Time.get_datetime_dict_from_unix_time(
+			Time.get_unix_time_from_datetime_dict(now_details) - 24 * 60 * 60 * 1
+		)
 
 		# Ensure it is not a weekend -- compute day of week and roll backward to Friday.
 		if now_details["weekday"] == Time.WEEKDAY_SATURDAY:
@@ -65,4 +80,6 @@ func delivery_date(start: String, description: String):
 		elif now_details["weekday"] == Time.WEEKDAY_SUNDAY:
 			offset = 24 * 60 * 60 * -2
 
-	return Time.get_datetime_string_from_unix_time(Time.get_unix_time_from_datetime_dict(now_details) + offset)
+	return Time.get_datetime_string_from_unix_time(
+		Time.get_unix_time_from_datetime_dict(now_details) + offset
+	)

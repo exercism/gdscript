@@ -1,5 +1,13 @@
 func clean(number: String):
-	number = number.replace("(", "").replace(")", "").replace("-", "").replace(".", "").replace(" ", "").replace("+", "")
+	number = (
+		number
+		. replace("(", "")
+		. replace(")", "")
+		. replace("-", "")
+		. replace(".", "")
+		. replace(" ", "")
+		. replace("+", "")
+	)
 	if len(number) == 11 and number.begins_with("1"):
 		number = number.substr(1)
 	if len(number) != 10 or not number.is_valid_int():

@@ -1,5 +1,6 @@
 const data = ["wink", "double blink", "close your eyes", "jump"]
 
+
 func commands(number: int):
 	var out = []
 	for i in range(len(data)):

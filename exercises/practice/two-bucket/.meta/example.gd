@@ -1,5 +1,6 @@
 """Solve the jug filling problem."""
 
+
 class Bucket:
 	"""A bucket with a capacity, volume and move counter."""
 
@@ -73,4 +74,3 @@ func measure(one: int, two: int, goal: int, start: String):
 		other = c
 	var moves = source.moves + dest.moves
 	return {"moves": moves, "goal_bucket": target.name, "other_bucket": other.volume}
-

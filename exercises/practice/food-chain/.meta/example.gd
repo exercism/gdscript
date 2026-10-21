@@ -8,15 +8,19 @@ var REACTIONS = {
 	"cow": "I don't know how she swallowed a cow!",
 	"horse": "She's dead, of course!",
 }
-var ANIMALS = {1: "fly", 2: "spider", 3: "bird", 4: "cat", 5: "dog", 6: "goat", 7: "cow", 8: "horse"}
+var ANIMALS = {
+	1: "fly", 2: "spider", 3: "bird", 4: "cat", 5: "dog", 6: "goat", 7: "cow", 8: "horse"
+}
 # Map each animal to it's food/subject, i.e. what it eats.
 var SUBJECTS = {}
+
 
 func _init():
 	for i in range(7):
 		SUBJECTS[ANIMALS[i + 2]] = ANIMALS[i + 1]
 	# Unlike all other animals, the bird does not simply eat a "spider". It is more detailed.
 	SUBJECTS["bird"] = "spider that wriggled and jiggled and tickled inside her"
+
 
 func verse(num: int) -> String:
 	var out = ["I know an old lady who swallowed a %s." % ANIMALS[num]]

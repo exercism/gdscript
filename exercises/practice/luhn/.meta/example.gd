@@ -1,11 +1,11 @@
-@export var card_num : String
+@export var card_num: String
 
 
 func valid():
 	var num = card_num.replace(" ", "")
 	if len(num) <= 1:
 		return false
-	
+
 	var checksum = 0
 	for index in range(len(num)):
 		var char = num[len(num) - 1 - index]
