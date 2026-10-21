@@ -3,7 +3,7 @@ class Cipher:
 
 	func _init(key = null):
 		pass
-	
+
 	func add(a: String, b: String, reverse: bool):
 		pass
 
