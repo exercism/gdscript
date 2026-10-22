@@ -1,7 +1,3 @@
-@export var score: int
-@export var lst: Array:
-	get = _get_lst
-
 const ALLERGENS = [
 	"eggs",
 	"peanuts",
@@ -12,6 +8,10 @@ const ALLERGENS = [
 	"pollen",
 	"cats",
 ]
+
+@export var score: int
+@export var lst: Array:
+	get = _get_lst
 
 
 func allergic_to(item):

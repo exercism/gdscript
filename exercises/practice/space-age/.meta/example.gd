@@ -1,4 +1,4 @@
-var EARTH_SECONDS = 31557600.0
+var earth_seconds = 31557600.0
 
 var orbital_periods = {
 	"Mercury": 0.2408467,
@@ -16,4 +16,4 @@ func on_planet(planet, seconds):
 	if planet not in orbital_periods:
 		return null
 	var ratio = orbital_periods[planet]
-	return seconds / EARTH_SECONDS / ratio
+	return seconds / earth_seconds / ratio

@@ -36,9 +36,8 @@ class Rational:
 	func exprational(power):
 		if power >= 0:
 			return Rational.new(self.numer ** power, self.denom ** power)
-		else:
-			power = abs(power)
-			return Rational.new(self.denom ** power, self.numer ** power)
+		power = abs(power)
+		return Rational.new(self.denom ** power, self.numer ** power)
 
 	func expreal(base):
 		# n'th root of x = root(x, n) = power(x, 1/n)

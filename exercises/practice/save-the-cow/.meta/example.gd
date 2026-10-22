@@ -1,9 +1,9 @@
 class SaveTheCow:
-	var _word = ""
-	var state = "Ongoing"
-	var remaining_failures = 9
-	var masked_word = ""
 	var error = null
+	var masked_word = ""
+	var remaining_failures = 9
+	var state = "Ongoing"
+	var _word = ""
 
 	func _init(word):
 		self._word = word

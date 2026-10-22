@@ -1,4 +1,4 @@
-const remove = "!@#$%^&*():.'"
+const REMOVE = "!@#$%^&*():.'"
 
 
 func count_words(sentence):
@@ -12,7 +12,7 @@ func count_words(sentence):
 	)
 	var count = {}
 	for word in sentence.split(" "):
-		word = word.lstrip(remove).rstrip(remove)
+		word = word.lstrip(REMOVE).rstrip(REMOVE)
 		if word.is_empty():
 			continue
 		if word not in count:
