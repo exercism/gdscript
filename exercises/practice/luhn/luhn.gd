@@ -1,4 +1,4 @@
-@export var card_num : String
+@export var card_num: String
 
 
 func valid():

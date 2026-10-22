@@ -2,6 +2,7 @@ extends SceneTree
 
 # godot --headless -s bin/verify-exercises.gd
 
+
 func _init():
 	# Calling `quit(1)` doesn't stop the program immediately, so a `return` is necessary.
 	# That's why errors are checked directly in `_init()`, instead of calling `quit(1)`
@@ -13,14 +14,12 @@ func _init():
 		return
 	var temp_dir_base_path = temp_dir_base.get_current_dir()
 
-	for exercise_base in [
-		"exercises/practice",
-		"exercises/concept"
-	]:
+	for exercise_base in ["exercises/practice", "exercises/concept"]:
 		if run_tests(exercise_base, temp_dir_base_path) != OK:
 			quit(1)
 			return
 	quit()
+
 
 func run_tests(exercise_base: String, temp_dir_base_path: String) -> Error:
 	for slug in DirAccess.get_directories_at(exercise_base):
@@ -49,7 +48,14 @@ func run_test(slug: String, exercise_dir: String, temp_dir_base_path: String) ->
 			push_error("Expected TYPE_DICTIONARY for JSON in: " + config_path)
 			return ERR_UNCONFIGURED
 	else:
-		push_error("JSON Parse Error: ", json.get_error_message(), " in ", config_path, " at line ", json.get_error_line())
+		push_error(
+			"JSON Parse Error: ",
+			json.get_error_message(),
+			" in ",
+			config_path,
+			" at line ",
+			json.get_error_line()
+		)
 		return parse_return_value
 
 	var solution_name: String = config.get("files", {}).get("solution", [])[0]
@@ -85,6 +91,13 @@ func run_test(slug: String, exercise_dir: String, temp_dir_base_path: String) ->
 			push_error(JSON.stringify(results, "\t"))
 			return FAILED
 	else:
-		push_error("JSON Parse Error: ", json.get_error_message(), " in ", config_path, " at line ", json.get_error_line())
+		push_error(
+			"JSON Parse Error: ",
+			json.get_error_message(),
+			" in ",
+			config_path,
+			" at line ",
+			json.get_error_line()
+		)
 		return parse_return_value
 	return OK

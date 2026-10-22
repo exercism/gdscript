@@ -1,4 +1,4 @@
-@export var tonic : String
+@export var tonic: String
 
 
 func chromatic(self):
