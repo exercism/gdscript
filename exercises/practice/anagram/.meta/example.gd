@@ -2,7 +2,7 @@ func find_anagram(word, candidates):
 	var result = []
 	var base_list = word.to_lower().split()
 	base_list.sort()
-	
+
 	for obj in candidates:
 		if word.to_lower() == obj.to_lower():
 			continue

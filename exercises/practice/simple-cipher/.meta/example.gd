@@ -1,5 +1,6 @@
 const ORD_A = ord("a")
 
+
 class Cipher:
 	var key = ""
 
@@ -11,13 +12,13 @@ class Cipher:
 				pick.append(letters.pick_random())
 			key = "".join(pick)
 		self.key = key
-	
+
 	func add(a: String, b: String, reverse: bool) -> String:
 		var val = ord(a) - ORD_A
 		var dist = ord(b) - ORD_A
 		if reverse:
 			dist *= -1
-		var out = (val + dist)
+		var out = val + dist
 		while out < 0:
 			out += 26
 		out = out % 26

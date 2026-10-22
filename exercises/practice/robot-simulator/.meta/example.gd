@@ -1,6 +1,5 @@
-@export var position : Vector2i
-@export var direction : Vector2i
-
+@export var position: Vector2i
+@export var direction: Vector2i
 
 var allowed_directions = [Vector2i.DOWN, Vector2i.RIGHT, Vector2i.UP, Vector2i.LEFT]
 

@@ -6,10 +6,17 @@ func is_valid(sides):
 
 
 func count_unique(lst):
-	return lst.reduce(
-		func(acc, elem):
-			acc[elem] = true
-			return acc, {}).size()
+	return (
+		lst
+		. reduce(
+			func(acc, elem):
+				acc[elem] = true
+				return acc,
+			{}
+		)
+		. size()
+	)
+
 
 func is_equilateral(sides):
 	return is_valid(sides) and count_unique(sides) == 1

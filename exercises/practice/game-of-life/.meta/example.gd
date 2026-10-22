@@ -1,12 +1,23 @@
 func is_alive(matrix, row: int, col: int) -> bool:
-	return row >= 0 and col >= 0 and row < len(matrix) and col < len(matrix[row]) and matrix[row][col] == 1
+	return (
+		row >= 0
+		and col >= 0
+		and row < len(matrix)
+		and col < len(matrix[row])
+		and matrix[row][col] == 1
+	)
 
 
 func tick(matrix):
 	var offsets = [
-		[-1, -1], [-1,  0], [-1,  1],
-		[ 0, -1],           [ 0,  1],
-		[ 1, -1], [ 1,  0], [ 1,  1],
+		[-1, -1],
+		[-1, 0],
+		[-1, 1],
+		[0, -1],
+		[0, 1],
+		[1, -1],
+		[1, 0],
+		[1, 1],
 	]
 	var out = []
 	for row_idx in range(len(matrix)):

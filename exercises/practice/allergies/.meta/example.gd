@@ -1,5 +1,6 @@
-@export var score : int
-@export var lst: Array: get = _get_lst
+@export var score: int
+@export var lst: Array:
+	get = _get_lst
 
 const ALLERGENS = [
 	"eggs",
@@ -13,11 +14,9 @@ const ALLERGENS = [
 ]
 
 
-
 func allergic_to(item):
 	var index = ALLERGENS.find(item)
 	return bool(1 << index & score)
-
 
 
 func _get_lst():

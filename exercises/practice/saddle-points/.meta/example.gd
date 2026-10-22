@@ -20,6 +20,4 @@ func saddle_points(matrix):
 			var val = row[col_idx]
 			if val == row_max and val == col_minimums[col_idx]:
 				points.append([row_idx + 1, col_idx + 1])
-    return points
-
-
+	return points

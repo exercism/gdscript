@@ -5,7 +5,7 @@ func spiral_matrix(size):
 		for j in range(size):
 			row.append(0)
 		matrix.append(row)
-	
+
 	var idx = 0
 	var jdx = -1
 	var element = 1
@@ -19,5 +19,5 @@ func spiral_matrix(size):
 			jdx += disco[edx % 4]
 			matrix[idx][jdx] = element
 			element += 1
-	
+
 	return matrix

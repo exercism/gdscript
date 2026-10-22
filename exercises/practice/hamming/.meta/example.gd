@@ -6,4 +6,3 @@ func distance(strand1: String, strand2: String) -> int:
 		if strand1[i] != strand2[i]:
 			out += 1
 	return out
-

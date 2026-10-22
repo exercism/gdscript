@@ -42,9 +42,8 @@ class Rational:
 
 	func expreal(base):
 		# n'th root of x = root(x, n) = power(x, 1/n)
-		return pow(base**self.numer, 1/float(self.denom))
+		return pow(base ** self.numer, 1 / float(self.denom))
 
 	func reduce():
 		var div = self.gcd(self.numer, self.denom)
 		return Rational.new(numer / div, denom / div)
-
