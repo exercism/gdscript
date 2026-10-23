@@ -415,6 +415,14 @@
         "difficulty": 5
       },
       {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "uuid": "1732e546-784a-483b-b43d-33d59f6b04e0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "game-of-life",
         "name": "Conway's Game of Life",
         "uuid": "12b85347-80c9-4a74-ae1d-258bb1a92f24",
