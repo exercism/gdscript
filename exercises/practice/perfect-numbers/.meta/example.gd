@@ -8,7 +8,6 @@ func classify(number: int):
 			aliquot += i
 	if aliquot == number:
 		return "perfect"
-	elif aliquot > number:
+	if aliquot > number:
 		return "abundant"
-	else:
-		return "deficient"
+	return "deficient"

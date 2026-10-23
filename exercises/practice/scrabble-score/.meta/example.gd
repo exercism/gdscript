@@ -1,4 +1,4 @@
-var SCORES = {
+var scores = {
 	"A": 1,
 	"E": 1,
 	"I": 1,
@@ -31,5 +31,5 @@ var SCORES = {
 func score(word: String) -> int:
 	var out: int = 0
 	for char in word.to_upper():
-		out += SCORES[char]
+		out += scores[char]
 	return out
