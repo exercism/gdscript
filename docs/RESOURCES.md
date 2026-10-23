@@ -13,7 +13,7 @@
 * [Official Godot Discord][discord]
 
 [gdscript-ref]: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/index.html
-[official-forum]: https://forum.godotengine.org/tag/gdscript
+[official-forum]: https://forum.godotengine.org/tag/gdscript/13
 [unofficial-forums]: https://godotforums.org/t/gdscript
 [stack-overflow]: https://stackoverflow.com/questions/tagged/gdscript
 [subreddit]: https://www.reddit.com/r/godot/
