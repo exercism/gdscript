@@ -9,7 +9,7 @@ The Godot Engine can be downloaded directly from [the Godot Engine website][down
 The download contains a zip folder with two executables, both named with the Godot Engine version.
 Extract this and open the first executuable.
 
-If you need a video guide, there is one [here][video-guide](It should work on Godot 4.7 or any other godot version)
+If you need a video guide, there is one [here][video-guide].(It should work on Godot 4.7 or any other godot version)
 
 This track uses Godot version 4.7.2.
 
