@@ -464,6 +464,14 @@
         "difficulty": 5
       },
       {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "bc130a73-7785-4f55-9460-d6d46f9f4a4d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "save-the-cow",
         "name": "Save the Cow",
         "uuid": "7812b681-4f0d-4d7b-8e5d-4a04a2e966e7",
