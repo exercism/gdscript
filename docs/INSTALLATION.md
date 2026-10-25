@@ -6,11 +6,20 @@ The Godot Engine runs on Windows, Linux, macOS, and Android.
 ## Installing Godot Engine
 
 The Godot Engine can be downloaded directly from [the Godot Engine website][download].
+There will be one .tar file or two executables in a zip file
 
-For Windows
+For tests
 ---
-The download contains a zip folder with two executables, both named with the Godot Engine version.
-Extract this and open the first executuable.
+This file needs to renamed `godot` and placed in one of the `$PATH` directories.
+After completing the installation, you can verify if the CLI was installed successfully by running this command in a terminal:
+
+```bash
+godot --version
+```
+For general use
+---
+Windows-
+Extract the zip file and open the executuable.
 
 This track uses Godot version 4.7.2.
 
