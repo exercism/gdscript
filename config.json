@@ -431,6 +431,14 @@
         "difficulty": 5
       },
       {
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "bfda674b-4e16-4a82-9f02-33970c97d265",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "prism",
         "name": "Prism",
         "uuid": "3f3f1488-90bf-44a3-b107-2ecfa4147941",
