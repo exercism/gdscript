@@ -431,17 +431,17 @@
         "difficulty": 5
       },
       {
-        "slug": "custom-set",
-        "name": "Custom Set",
-        "uuid": "603c4faf-4246-4ede-aaba-97ee56986d00",
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "12b85347-80c9-4a74-ae1d-258bb1a92f24",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
       },
       {
-        "slug": "game-of-life",
-        "name": "Conway's Game of Life",
-        "uuid": "12b85347-80c9-4a74-ae1d-258bb1a92f24",
+        "slug": "custom-set",
+        "name": "Custom Set",
+        "uuid": "603c4faf-4246-4ede-aaba-97ee56986d00",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
