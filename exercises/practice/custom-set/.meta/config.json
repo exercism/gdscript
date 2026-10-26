@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "IsaacG"
+  ],
+  "files": {
+    "solution": [
+      "custom_set.gd"
+    ],
+    "test": [
+      "custom_set_test.gd",
+      "run_tests",
+      "lib/test_runner.gd",
+      "project.godot"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Create a custom set type."
+}
