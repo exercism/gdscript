@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "IsaacG"
+  ],
+  "files": {
+    "solution": [
+      "nucleotide_count.gd"
+    ],
+    "test": [
+      "nucleotide_count_test.gd",
+      "run_tests",
+      "lib/test_runner.gd",
+      "project.godot"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Given a DNA string, compute how many times each nucleotide occurs in the string.",
+  "source": "The Counting DNA Nucleotides problem at Rosalind",
+  "source_url": "https://rosalind.info/problems/dna/"
+}

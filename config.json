@@ -246,6 +246,14 @@
         "difficulty": 3
       },
       {
+        "slug": "nucleotide-count",
+        "name": "Nucleotide Count",
+        "uuid": "25a6ba79-936b-4dba-8a74-a23b38a2249f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
         "uuid": "c15ce044-1a62-45eb-86a2-079554cbd2c2",
