@@ -447,6 +447,14 @@
         "difficulty": 5
       },
       {
+        "slug": "custom-set",
+        "name": "Custom Set",
+        "uuid": "603c4faf-4246-4ede-aaba-97ee56986d00",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "nth-prime",
         "name": "Nth Prime",
         "uuid": "bfda674b-4e16-4a82-9f02-33970c97d265",
