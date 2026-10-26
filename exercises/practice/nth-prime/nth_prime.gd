@@ -1,0 +1,2 @@
+func prime(n):
+	pass
