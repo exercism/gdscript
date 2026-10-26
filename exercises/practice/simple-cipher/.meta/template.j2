@@ -24,8 +24,8 @@ func test_key_is_made_only_of_lowercase_letters(solution_script):
 
 {% for case in cases %}{% if case.descriptions[0] == "Substitution cipher" and case.input.keys() | length == 2 %}
 func test_{{ case.func_name }}(solution_script):
-	var got = solution_script.Cipher.new({{ case.input.key | togdscript }}).{{ case.property | camel_to_snake }}({{ (case.input.plaintext or case.input.ciphertext) | togdscript }})
-	var want = {{ case.expected | togdscript }}
+	var got = solution_script.Cipher.new({{ case.input.key | quote }}).{{ case.property | camel_to_snake }}({{ (case.input.plaintext or case.input.ciphertext) | quote }})
+	var want = {{ case.expected | quote }}
 	return [got, want]
 
 {% endif %}{% endfor %}

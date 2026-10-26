@@ -1,9 +1,9 @@
 {% for case in cases %}
 func test_{{ case.func_name }}(solution_script):
-	var want = {{ case.expected | togdscript }}
+	var want = {{ case.expected | quote }}
 	var got = solution_script.{{ case.property | camel_to_snake }}(
-		{{ case.input.playerA | togdscript }},
-		{{ case.input.playerB | togdscript }}
+		{{ case.input.playerA | quote }},
+		{{ case.input.playerB | quote }}
 	)
 	return [got, want]
 

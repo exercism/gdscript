@@ -5,7 +5,7 @@ func test_{{ case.func_name }}(solution_script):
 {% else %}
 	var want = null
 {% endif %}
-	var input = {{ case.given | togdscript }}
+	var input = {{ case.given | quote }}
 	var got = solution_script.{{ case.property | camel_to_snake }}(input)
 	return [got, want]
 

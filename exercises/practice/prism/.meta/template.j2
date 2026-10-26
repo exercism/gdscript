@@ -6,7 +6,7 @@ func test_{{ case.func_name }}(solution_script):
 		[{{ prism.id }}, Vector2({{ prism.x }}, {{ prism.y }}), {{ prism.angle }}],{% endfor %}
 	]
 
-	var want = {{ case.expected.sequence | togdscript }}
+	var want = {{ case.expected.sequence | quote }}
 	var got = solution_script.{{ case.property | camel_to_snake }}(position, angle, prisms)
 	return [got, want]
 

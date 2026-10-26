@@ -9,7 +9,7 @@ func _sorted(array):
 
 func test_{{ case.input.item }}_{{ case.func_name }}(allergies):
 	allergies.score = {{ case.input.score }}
-	return [allergies.allergic_to("{{ case.input.item }}"), {{ case.expected }}]
+	return [allergies.allergic_to("{{ case.input.item }}"), {{ case.expected | quote }}]
 {%- else %}
 
 func test_list_when_{{ case.func_name }}(allergies):

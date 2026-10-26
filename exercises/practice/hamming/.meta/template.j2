@@ -1,7 +1,7 @@
 {% for case in cases %}
 func test_{{ case.func_name }}(solution_script):
-	var strand1 = {{ case.input.strand1 | togdscript }}
-	var strand2 = {{ case.input.strand2 | togdscript }}
+	var strand1 = {{ case.input.strand1 | quote }}
+	var strand2 = {{ case.input.strand2 | quote }}
 	var got = solution_script.{{ case.property }}(strand1, strand2)
 {%- if not case.expect_error %}
 	var want = {{ case.expected }}

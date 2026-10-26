@@ -1,6 +1,6 @@
 {% for case in cases %}
 func test_{{ case.func_name }}(solution_script):
-	var got = solution_script.{{ case.property | camel_to_snake }}({{ case.given | togdscript }})
+	var got = solution_script.{{ case.property | camel_to_snake }}({{ case.given | quote }})
 	var want = [{% for pair in case.expected %}[{{ pair.row }}, {{ pair.column }}]{% if not loop.last %}, {% endif %}{% endfor %}]
 	got.sort()
 	want.sort()

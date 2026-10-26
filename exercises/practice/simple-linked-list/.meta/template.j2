@@ -1,6 +1,6 @@
 {% for case in cases %}
 func test_{{ case.func_name }}(solution_script):
-	var linked_list = solution_script.LinkedList.new({{ case.input.initialValues | togdscript }})
+	var linked_list = solution_script.LinkedList.new({{ case.input.initialValues | quote }})
 	var res = 0
 {% for op in case.input.operations %}
 {%- if op.operation == "count" %}
@@ -27,8 +27,8 @@ func test_{{ case.func_name }}(solution_script):
 		return [false, "peek() = %d; expected %d" % [res, {{ op.expected }}]]
 {%- elif op.operation == "toList" %}
 	res = linked_list.to_list()
-	if res != {{ op.expected | togdscript }}:
-		return [false, "to_list() = %s; expected %s" % [res, {{ op.expected | togdscript }}]]
+	if res != {{ op.expected | quote }}:
+		return [false, "to_list() = %s; expected %s" % [res, {{ op.expected | quote }}]]
 {%- else %}
 	linked_list.{{ op.operation }}()
 {%- endif %}

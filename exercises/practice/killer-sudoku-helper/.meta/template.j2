@@ -1,7 +1,7 @@
 {% for case in cases %}
 func test_{{ case.func_name }}(solution_script):
-	var got = solution_script.{{ case.property | camel_to_snake }}({{ case.given.sum }}, {{ case.given.size }}, {{ case.given.exclude | togdscript }})
-	var want = {{ case.expected | togdscript }}
+	var got = solution_script.{{ case.property | camel_to_snake }}({{ case.given.sum }}, {{ case.given.size }}, {{ case.given.exclude | quote }})
+	var want = {{ case.expected | quote }}
 	got.sort()
 	want.sort()
 	return [got, want]
