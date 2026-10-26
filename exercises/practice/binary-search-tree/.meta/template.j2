@@ -12,13 +12,13 @@ func equal(a, b):
 
 {% for case in cases %}
 func test_{{ case.func_name }}(solution_script):
-	var bst = solution_script.BinarySearchTree.new({{ case.given | togdscript | replace('"', '') }})
+	var bst = solution_script.BinarySearchTree.new({{ case.given | quote | replace('"', '') }})
 	var got = bst.{{ case.property | camel_to_snake }}()
 {%- if case.property == "data" %}
 	var want = {{ node(case.expected) }}
 	return [equal(got, want), true]
 {%- else %}
-	var want = {{ case.expected | togdscript | replace('"', '') }}
+	var want = {{ case.expected | quote | replace('"', '') }}
 	return [got, want]
 {%- endif %}
 

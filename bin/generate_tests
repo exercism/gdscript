@@ -68,13 +68,13 @@ def get_cases(specs: pathlib.Path, exercise: pathlib.Path) -> list[dict]:
     return cases
 
 
-def filter_togdscript(obj) -> str:
-    """Filter `togdscript` that converts an arbitrary object to the GDScript version."""
+def filter_quote(obj) -> str:
+    """Filter `quote` that converts an arbitrary object to the GDScript version."""
     if isinstance(obj, dict):
-        out = ", ".join(f"{filter_togdscript(k)}: {filter_togdscript(v)}" for k, v in obj.items())
+        out = ", ".join(f"{filter_quote(k)}: {filter_quote(v)}" for k, v in obj.items())
         return "{" + out + "}"
     if isinstance(obj, list):
-        out = ", ".join(filter_togdscript(i) for i in obj)
+        out = ", ".join(filter_quote(i) for i in obj)
         return f"[{out}]"
     if obj is True:
         return "true"
@@ -91,7 +91,7 @@ def filter_togdscript(obj) -> str:
         if "'" not in obj:
             return "'" + obj + "'"
         return '"' + obj.replace('"', '\\"') + '"'
-    return TypeError(f"filter_togdscript for type {type(obj)} not supported")
+    return TypeError(f"filter_quote for type {type(obj)} not supported")
 
 
 def filter_tojson(data, separators=(',', ':'), indent=None) -> str:
@@ -102,33 +102,13 @@ def filter_tojson(data, separators=(',', ':'), indent=None) -> str:
 def jinja_env(exercise: pathlib.Path) -> jinja2.Environment:
     """Return a configured Jinja env with filters added."""
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(exercise / ".meta"))
-    # Shell quoting
-    env.filters["quote"] = shlex.quote
-    # JSON formatting, default to compact form (`jq -c`).
-    env.filters["tojson"] = filter_tojson
-    # GDScript
-    env.filters["togdscript"] = filter_togdscript
+    # GDScript quoting
+    env.filters["quote"] = filter_quote
     # String escaping, ANSI-C style.
     env.filters["repr"] = repr
     # Return a dict with only specified keys kepts.
     env.filters["camel_to_snake"] = lambda x: re.sub(r"([a-z])([A-Z])", (lambda m: f"{m.group(1)}_{m.group(2).lower()}"), x)
-    env.filters["format_list"] = lambda x: shlex.quote(
-        "[" + ",".join(f'"{i}"' if isinstance(i, str) else str(i) for i in x) + "]"
-    )
     return env
-
-
-def bool_to_str(obj):
-    """Convert boolean values to strings."""
-    if isinstance(obj, dict):
-        return {key: bool_to_str(val) for key, val in obj.items()}
-    if isinstance(obj, list):
-        return [bool_to_str(val) for val in obj]
-    if obj is True:
-        return "true"
-    if obj is False:
-        return "false"
-    return obj
 
 
 def generate(specs: pathlib.Path, exercise: pathlib.Path) -> None:
@@ -136,7 +116,6 @@ def generate(specs: pathlib.Path, exercise: pathlib.Path) -> None:
     cases = get_cases(specs, exercise)
     translation = str.maketrans({i: "_" for i in string.punctuation + " "})
     for case in cases:
-        case["expected"] = bool_to_str(case["expected"])
         case["func_name"] = re.sub("_+", "_", case["description"].lower().translate(translation))
         if len(case.get("input", {}).values()) == 1:
             case["given"] = list(case["input"].values())[0]

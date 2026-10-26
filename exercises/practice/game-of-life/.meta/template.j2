@@ -1,10 +1,10 @@
 {% for case in cases %}
 func test_{{ case.func_name }}(solution_script):
 	var initial = [{% for row in case.given %}
-		{{ row | togdscript }},{% endfor %}
+		{{ row | quote }},{% endfor %}
 	]
 	var want = [{% for row in case.expected %}
-		{{ row | togdscript }},{% endfor %}
+		{{ row | quote }},{% endfor %}
 	]
 	return [solution_script.{{ case.property | camel_to_snake }}(initial), want]
 

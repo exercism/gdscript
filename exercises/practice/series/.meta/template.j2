@@ -5,7 +5,7 @@ func test_{{ case.property }}_{{ case.func_name }}(solution_script):
 {%- else %}
 	var expected = null
 {%- endif %}
-	var got = solution_script.{{ case.property }}({{ case.input.series | togdscript }}, {{ case.input.sliceLength }})
+	var got = solution_script.{{ case.property }}({{ case.input.series | quote }}, {{ case.input.sliceLength }})
 	return [got, expected]
 
 {% endfor %}
