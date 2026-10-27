@@ -1,8 +1,8 @@
 {% for case in cases %}
 func test_{{ case.func_name }}(solution_script):
-	var got = solution_script.{{ case.property | camel_to_snake }}({{ case.input.inputBase | togdscript }}, {{ case.input.digits | togdscript }}, {{ case.input.outputBase | togdscript }})
+	var got = solution_script.{{ case.property | camel_to_snake }}({{ case.input.inputBase | quote }}, {{ case.input.digits | quote }}, {{ case.input.outputBase | quote }})
 {%- if not case.expect_error %}
-	var want = {{ case.expected | togdscript }}
+	var want = {{ case.expected | quote }}
 {%- else %}
 	var want = null
 {%- endif %}

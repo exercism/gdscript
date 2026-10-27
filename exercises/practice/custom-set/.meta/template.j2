@@ -1,22 +1,22 @@
 {% for case in cases %}
 func test_{{ case.func_name }}(solution_script):
 {%- if "set" in case.input %}
-	var set = solution_script.Set.new({{ case.input.set | togdscript }})
+	var set = solution_script.Set.new({{ case.input.set | quote }})
 	{%- if "element" in case.input %}
 	var got = set.{{ case.property }}({{ case.input.element }})
 	{%- else %}
 	var got = set.{{ case.property }}()
 	{%- endif %}
 {%- else %}
-	var set_one = solution_script.Set.new({{ case.input.set1 | togdscript }})
-	var set_two = solution_script.Set.new({{ case.input.set2 | togdscript }})
+	var set_one = solution_script.Set.new({{ case.input.set1 | quote }})
+	var set_two = solution_script.Set.new({{ case.input.set2 | quote }})
 	var got = set_one.{{ case.property }}(set_two)
 {%- endif %}
 {%- if case.expected is sequence and case.expected is not string%}
-	var want = solution_script.Set.new({{ case.expected | togdscript }})
+	var want = solution_script.Set.new({{ case.expected | quote }})
 	return [got.equal(want), true]
 {%- else %}
-	var want = {{ case.expected }}
+	var want = {{ case.expected | quote }}
 	return [got, want]
 {%- endif %}
 
