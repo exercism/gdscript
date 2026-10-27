@@ -2,7 +2,7 @@
 func test_{{ case.func_name }}(solution_script):
 	solution_script.card_num = "{{ case.given }}"
 	var got = solution_script.{{ case.property }}()
-	var want = {{ case.expected }}
+	var want = {{ "true" if case.expected else "false" }}
 	return [got, want]
 
 {% endfor %}
