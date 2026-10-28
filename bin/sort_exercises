@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+self=$(readlink -e "$0")
+bin=${self%/*}
+
+# shellcheck disable=SC1091
+. "${bin}/utils.bash"
+
+config="${REPO_ROOT}/config.json"
+
+sorted=$( jq '
+    (.exercises.practice |= sort_by(.name | ascii_downcase)) |
+    .exercises.practice |= sort_by(.difficulty)
+' "${config}" )
+printf '%s\n' "${sorted}" > "${config}"
