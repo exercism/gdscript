@@ -85,7 +85,7 @@ def filter_quote(obj) -> str:
     if isinstance(obj, (int, float)):
         return f"{obj}"
     if isinstance(obj, str):
-        obj = obj.replace("\\", "\\\\")
+        obj = obj.replace("\\", "\\\\").replace("\n", "\\n")
         if '"' not in obj:
             return '"' + obj + '"'
         if "'" not in obj:
