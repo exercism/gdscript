@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "IsaacG"
+  ],
+  "files": {
+    "solution": [
+      "linked_list.gd"
+    ],
+    "test": [
+      "linked_list_test.gd",
+      "run_tests",
+      "lib/test_runner.gd",
+      "project.godot"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Implement a doubly linked list.",
+  "source": "Classic computer science topic"
+}

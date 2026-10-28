@@ -455,6 +455,14 @@
         "difficulty": 5
       },
       {
+        "slug": "linked-list",
+        "name": "Linked List",
+        "uuid": "c9a57acf-9f9f-4973-b22e-252bdef18ed1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "nth-prime",
         "name": "Nth Prime",
         "uuid": "bfda674b-4e16-4a82-9f02-33970c97d265",
