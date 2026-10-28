@@ -1,0 +1,26 @@
+{% for case in cases %}
+func test_{{ case.func_name }}(solution_script):
+	var linked_list = solution_script.LinkedList.new()
+	var res = 0
+{% for op in case.input.operations %}
+{%- if op.operation == "count" %}
+	res = linked_list.count()
+	if res != {{ op.expected }}:
+		return [false, "count() = %d; expected %d" % [res, {{ op.expected }}]]
+{%- elif (op.operation == "pop" or op.operation == "shift") and "expected" in op %}
+	res = linked_list.{{ op.operation }}()
+	if res != {{ op.expected }}:
+		return [false, "{{ op.operation }}() = %d; expected %d" % [res, {{ op.expected }}]]
+{%- elif op.operation == "pop" or op.operation == "shift" %}
+	linked_list.{{ op.operation }}()
+{%- elif op.operation == "push" or op.operation == "unshift" %}
+	linked_list.{{ op.operation }}({{ op.value }})
+{%- elif op.operation == "delete" %}
+	linked_list.{{ op.operation }}({{ op.value }})
+{%- else %}
+	{{ "Invalid op" | raise_error }}
+{%- endif %}
+{% endfor %}
+	return [true, true]
+
+{% endfor %}
