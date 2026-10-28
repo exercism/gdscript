@@ -23,9 +23,7 @@ func test_handles_cramped_lists(solution_script):
 
 
 func test_handles_expanded_lists(solution_script):
-	var got = solution_script.count_words("one,
-two,
-three")
+	var got = solution_script.count_words("one,\ntwo,\nthree")
 	var want = {"one": 1, "two": 1, "three": 1}
 	return [got, want]
 
@@ -73,10 +71,7 @@ func test_multiple_spaces_not_detected_as_a_word(solution_script):
 
 
 func test_alternating_word_separators_not_detected_as_a_word(solution_script):
-	var got = solution_script.count_words(",
-,one,
- ,two 
- 'three'")
+	var got = solution_script.count_words(",\n,one,\n ,two \n 'three'")
 	var want = {"one": 1, "two": 1, "three": 1}
 	return [got, want]
 
