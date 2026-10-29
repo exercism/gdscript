@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "IsaacG"
+  ],
+  "files": {
+    "solution": [
+      "flower_field.gd"
+    ],
+    "test": [
+      "flower_field_test.gd",
+      "run_tests",
+      "lib/test_runner.gd",
+      "project.godot"
+    ],
+    "example": [
+      ".meta/example.gd"
+    ]
+  },
+  "blurb": "Mark all the flowers in a garden."
+}
