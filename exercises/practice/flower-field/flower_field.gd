@@ -1,0 +1,2 @@
+func annotate(garden):
+	pass

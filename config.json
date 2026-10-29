@@ -560,6 +560,14 @@
         "difficulty": 6
       },
       {
+        "slug": "flower-field",
+        "name": "Flower Field",
+        "uuid": "a989bd48-2ec8-4e23-bee7-9282ba3188a0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "slug": "killer-sudoku-helper",
         "name": "Killer Sudoku Helper",
         "uuid": "8ef12214-a6ed-4ea7-8300-db7bb7ce340f",

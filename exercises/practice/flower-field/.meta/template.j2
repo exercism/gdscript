@@ -1,0 +1,11 @@
+{% for case in cases %}
+func test_{{ case.func_name }}(solution_script):
+	var got = solution_script.{{ case.property }}([{% for line in case.given %}
+		{{ line | quote }},{% endfor %}
+	])
+	var want = [{% for line in case.expected %}
+		{{ line | quote }},{% endfor %}
+	]
+	return [got, want]
+
+{% endfor %}
