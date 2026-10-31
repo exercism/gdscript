@@ -608,6 +608,14 @@
         "difficulty": 7
       },
       {
+        "slug": "yacht",
+        "name": "Yacht",
+        "uuid": "e1ee7633-1f85-4f87-8f06-20b9d1818c88",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
         "slug": "alphametics",
         "name": "Alphametics",
         "uuid": "2c442eda-4b11-4282-916b-ba33a1bae95a",
