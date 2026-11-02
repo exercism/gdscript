@@ -1,9 +1,9 @@
 {% for case in cases %}
 func test_{{ case.func_name }}(solution_script):
-	var subject = "{{ case.input.subject }}"
-	var candidates = {{ case.input.candidates }}
+	var subject = {{ case.input.subject | quote }}
+	var candidates = {{ case.input.candidates | quote }}
 	var want = {{ case.expected }}
 	var got = solution_script.find_anagram(subject, candidates)
-	return [got, want]
+	return [got, want, 'find_anagram({{ case.input.subject | quote }}, {{ case.input.candidates | quote }} = %s, but want %s' % [got, want]]
 
 {% endfor %}
