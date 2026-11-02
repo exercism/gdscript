@@ -1,0 +1,2 @@
+func gamestate(board):
+	pass
