@@ -1,0 +1,60 @@
+{% for case in cases %}{% if case.property == "sharedBirthday" %}
+func test_{{ case.func_name }}(solution_script):
+	var got = solution_script.{{ case.property | camel_to_snake }}({{ case.given | quote }})
+	var want = {{ case.expected | quote }}
+	return [got, want]
+
+{% endif %}{% endfor %}{% for count in [0, 1, 2, 5, 10] %}
+func test_random_birthdates_count_{{ count }}(solution_script):
+	var got = len(solution_script.random_birthdates({{ count }}))
+	var want = {{ count }}
+	return [got, want]
+
+{% endfor %}
+func test_random_birthdates_not_leapyear(solution_script):
+	var is_leap = false
+	var dates = solution_script.random_birthdates(300)
+	for date in dates:
+		if date["year"] % 400 == 0 or date["year"] % 4 == 0 and date["year"] % 100 != 0:
+			is_leap = true
+			break
+	return [is_leap, false]
+
+
+func test_random_birthdates_random_months(solution_script):
+	var months = {}
+	var dates = solution_script.random_birthdates(600)
+	for date in dates:
+		if date["month"] not in months:
+			months[date["month"]] = 0
+		months[date["month"]] += 1
+	var is_distributed = len(months) == 12
+	for month in months:
+		if months[month] < 15:
+			is_distributed = false
+
+	return [is_distributed, true]
+
+
+func test_random_birthdates_random_days(solution_script):
+	var days = {}
+	var dates = solution_script.random_birthdates(600)
+	for date in dates:
+		if date["day"] not in days:
+			days[date["day"]] = 0
+		days[date["day"]] += 1
+	var is_distributed = len(days) > 25
+	for day in days:
+		if days[day] < 5:
+			is_distributed = false
+
+	return [is_distributed, true]
+
+{% for case in cases %}{% if case.property == "estimatedProbabilityOfSharedBirthday" %}
+func test_{{ case.func_name }}(solution_script):
+	var got = solution_script.{{ case.property | camel_to_snake }}({{ case.given | quote }})
+	var want = {{ case.expected | quote }}
+	return [got - 1 < want and want < got + 1, true]
+
+{% endif %}{% endfor %}
+
