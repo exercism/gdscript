@@ -291,18 +291,18 @@ class Runner:
 
 		return methods
 
-	func get_failed_test_message(actual, expected) -> String:
+	func get_failed_test_message(output) -> String:
 		"""
-		Generates a message for a failed test. If given values are strings,
-		this method will wrap them in single quotes, to distinguish from
-		other types, like integers (e.g. '3' vs 3).
+		Return the message to display for a failed test.
 
-		This method should be used if the actual and expected values for a
-		given test are different, or if they have different types.
+		`output` is a list containing `[actual, expected]` and an optional `message`.
+		If a message is provided, use it. Otherwise, format the actual and expected.
 		"""
+		if len(output) == 3:
+			return output[2]
+
 		var values = []
-
-		for value in [actual, expected]:
+		for value in output:
 			var formatted_value = str(value)
 			if typeof(value) == TYPE_STRING:
 				formatted_value = "'{0}'".format([formatted_value])
@@ -370,7 +370,7 @@ class Runner:
 				if error_message.is_empty():
 					status = "pass" if passed else "fail"
 					error_message = (
-						null if passed else self.get_failed_test_message(actual, expected)
+						null if passed else self.get_failed_test_message(output)
 					)
 
 				var test_code = test_codes[method["name"]]
