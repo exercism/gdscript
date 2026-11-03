@@ -6,7 +6,11 @@ func test_{{ case.func_name }}(solution_script):
 {%- else %}
 	var want = null
 {%- endif %}
-	return [got, want]
+	return [
+		got,
+		want,
+		'{{ case.property | camel_to_snake }}({{ case.input.inputBase | quote }}, {{ case.input.digits | quote }}, {{ case.input.outputBase | quote }}) = %s, but want %s' % [got, want]
+	]
 
 {% endfor %}
 

@@ -9,14 +9,19 @@ func _sorted(array):
 
 func test_{{ case.input.item }}_{{ case.func_name }}(allergies):
 	allergies.score = {{ case.input.score }}
-	return [allergies.allergic_to("{{ case.input.item }}"), {{ case.expected | quote }}]
+	var got = allergies.allergic_to("{{ case.input.item }}")
+	var want = {{ case.expected | quote }}
+	return [got, want, "with score={{ case.input.score }}, allergic_to() == %s, but want %s" % [got, want]]
 {%- else %}
 
 func test_list_when_{{ case.func_name }}(allergies):
 	allergies.score = {{ case.input.score }}
+	var got =_sorted(allergies.lst)
+	var want = _sorted({{ case.expected }})
 	return [
-		_sorted(allergies.lst),
-		_sorted({{ case.expected }})
+		got,
+		want,
+		"with score={{ case.input.score }}, lst\n  got: %s\n  want %s" % [got, want]
 	]
 {%- endif %}
 {% endfor %}
