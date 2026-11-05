@@ -5,8 +5,8 @@
   "status": {
     "concept_exercises": false,
     "test_runner": true,
-    "representer": false,
-    "analyzer": false
+    "representer": true,
+    "analyzer": true
   },
   "blurb": "GDScript is a high-level, object-oriented, imperative, and gradually typed programming language built for Godot. It uses an indentation-based syntax similar to languages like Python. Its goal is to be optimized for and tightly integrated with Godot Engine, allowing great flexibility for content creation and integration.",
   "version": 3,
