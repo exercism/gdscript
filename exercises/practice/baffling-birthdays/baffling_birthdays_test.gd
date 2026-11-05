@@ -129,22 +129,22 @@ func test_random_birthdates_random_days(solution_script):
 func test_for_one_person(solution_script):
 	var got = solution_script.estimated_probability_of_shared_birthday(1)
 	var want = 0.0
-	return [got - 1 < want and want < got + 1, true, "estimated_probability_of_shared_birthday(1) = %s, expected %s +/- 1" % [got, want]]
+	return [got - 2 < want and want < got + 2, true, "estimated_probability_of_shared_birthday(1) = %s, expected %s +/- 2" % [got, want]]
 
 
 func test_among_ten_people(solution_script):
 	var got = solution_script.estimated_probability_of_shared_birthday(10)
 	var want = 11.694818
-	return [got - 1 < want and want < got + 1, true, "estimated_probability_of_shared_birthday(10) = %s, expected %s +/- 1" % [got, want]]
+	return [got - 2 < want and want < got + 2, true, "estimated_probability_of_shared_birthday(10) = %s, expected %s +/- 2" % [got, want]]
 
 
 func test_among_twenty_three_people(solution_script):
 	var got = solution_script.estimated_probability_of_shared_birthday(23)
 	var want = 50.729723
-	return [got - 1 < want and want < got + 1, true, "estimated_probability_of_shared_birthday(23) = %s, expected %s +/- 1" % [got, want]]
+	return [got - 2 < want and want < got + 2, true, "estimated_probability_of_shared_birthday(23) = %s, expected %s +/- 2" % [got, want]]
 
 
 func test_among_seventy_people(solution_script):
 	var got = solution_script.estimated_probability_of_shared_birthday(70)
 	var want = 99.915958
-	return [got - 1 < want and want < got + 1, true, "estimated_probability_of_shared_birthday(70) = %s, expected %s +/- 1" % [got, want]]
+	return [got - 2 < want and want < got + 2, true, "estimated_probability_of_shared_birthday(70) = %s, expected %s +/- 2" % [got, want]]

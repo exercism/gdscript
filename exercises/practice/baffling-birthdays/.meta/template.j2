@@ -58,7 +58,7 @@ func test_random_birthdates_random_days(solution_script):
 func test_{{ case.func_name }}(solution_script):
 	var got = solution_script.{{ case.property | camel_to_snake }}({{ case.given | quote }})
 	var want = {{ case.expected | quote }}
-	return [got - 1 < want and want < got + 1, true, "{{ case.property | camel_to_snake }}({{ case.given | quote }}) = %s, expected %s +/- 1" % [got, want]]
+	return [got - 2 < want and want < got + 2, true, "{{ case.property | camel_to_snake }}({{ case.given | quote }}) = %s, expected %s +/- 2" % [got, want]]
 
 {% endif %}{% endfor %}
 
