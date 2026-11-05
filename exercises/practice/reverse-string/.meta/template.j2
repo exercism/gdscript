@@ -1,9 +1,7 @@
 {% for case in cases %}
-{%- if "unicode" not in case.scenarios %}
 func test_{{ case.func_name }}(solution_script):
-	var want = "{{ case.expected }}"
-	var got = solution_script.{{ case.property }}("{{ case.given }}")
-	return [got, want]
+	var want = {{ case.expected | quote }}
+	var got = solution_script.{{ case.property }}({{ case.given | quote }})
+	return [got, want, "{{ case.property }}(%s) = %s, expected %s" % [{{ case.given | quote }}, got, want]]
 
-{% endif %}
-{%- endfor %}
+{% endfor %}
