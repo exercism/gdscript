@@ -2,6 +2,7 @@
 func test_{{ case.func_name }}(solution_script):
 	var colors = {{ case.input.colors | quote }}
 	var expected = "{{ case.expected.value }} {{ case.expected.unit }}"
-	return [solution_script.{{ case.property | camel_to_snake }}(colors), expected]
+	var got = solution_script.{{ case.property | camel_to_snake }}(colors)
+	return [got, expected, "{{ case.property | camel_to_snake }}(%s) = %s, expected %s" % [colors, got, want]]
 
 {% endfor %}
