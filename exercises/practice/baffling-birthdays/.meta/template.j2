@@ -2,23 +2,25 @@
 func test_{{ case.func_name }}(solution_script):
 	var got = solution_script.{{ case.property | camel_to_snake }}({{ case.given | quote }})
 	var want = {{ case.expected | quote }}
-	return [got, want]
+	return [got, want, "{{ case.property | camel_to_snake }}(%s) = %s, expected %s" % [{{ case.given | quote }}, got, want]]
 
 {% endif %}{% endfor %}{% for count in [0, 1, 2, 5, 10] %}
 func test_random_birthdates_count_{{ count }}(solution_script):
 	var got = len(solution_script.random_birthdates({{ count }}))
 	var want = {{ count }}
-	return [got, want]
+	return [got, want, "random_birthdates(%d)) gave %d birthdates, expected %d" % [{{ count }}, got, want]]
 
 {% endfor %}
 func test_random_birthdates_not_leapyear(solution_script):
-	var is_leap = false
 	var dates = solution_script.random_birthdates(300)
 	for date in dates:
 		if date["year"] % 400 == 0 or date["year"] % 4 == 0 and date["year"] % 100 != 0:
-			is_leap = true
-			break
-	return [is_leap, false]
+			return [
+				true,
+				false,
+				"random_birthdates(300) returned a birthdate in a leap year: %s; leap years should be avoided" % date
+			]
+	return [true, true]
 
 
 func test_random_birthdates_random_months(solution_script):
@@ -28,12 +30,13 @@ func test_random_birthdates_random_months(solution_script):
 		if date["month"] not in months:
 			months[date["month"]] = 0
 		months[date["month"]] += 1
-	var is_distributed = len(months) == 12
+	if len(months) != 12:
+		return [true, false, "random_birthdates(600) gave %d unique months, expected 12" % len(months)]
 	for month in months:
 		if months[month] < 15:
-			is_distributed = false
+			return [true, false, "random_birthdates(600) gave %d birthdates in month %s, expected at least 15 per month" % [month, months[month]]]
 
-	return [is_distributed, true]
+	return [true, true]
 
 
 func test_random_birthdates_random_days(solution_script):
@@ -43,18 +46,19 @@ func test_random_birthdates_random_days(solution_script):
 		if date["day"] not in days:
 			days[date["day"]] = 0
 		days[date["day"]] += 1
-	var is_distributed = len(days) > 25
+	if len(days) < 25:
+		return [true, false, "random_birthdates(600) gave %d unique days, expected at least 25" % len(days)]
 	for day in days:
 		if days[day] < 5:
-			is_distributed = false
+			return [true, false, "random_birthdates(600) gave %d occurances of day %d, expected at least 5" % [days[day], day]]
 
-	return [is_distributed, true]
+	return [true, true]
 
 {% for case in cases %}{% if case.property == "estimatedProbabilityOfSharedBirthday" %}
 func test_{{ case.func_name }}(solution_script):
 	var got = solution_script.{{ case.property | camel_to_snake }}({{ case.given | quote }})
 	var want = {{ case.expected | quote }}
-	return [got - 1 < want and want < got + 1, true]
+	return [got - 1 < want and want < got + 1, true, "{{ case.property | camel_to_snake }}({{ case.given | quote }}) = %s, expected %s +/- 1" % [got, want]]
 
 {% endif %}{% endfor %}
 
