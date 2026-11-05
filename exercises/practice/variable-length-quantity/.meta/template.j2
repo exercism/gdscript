@@ -7,7 +7,7 @@ func test_{{ case.func_name }}(solution_script):
 {% endif %}
 	var input = {{ case.given | quote }}
 	var got = solution_script.{{ case.property | camel_to_snake }}(input)
-	return [got, want]
+	return [got, want, "{{ case.property | camel_to_snake }}(%s) = %s, expected %s" % [input, got, want]]
 
 {% endfor %}
 
