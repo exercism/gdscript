@@ -1,8 +1,8 @@
 {% for case in cases %}
 func test_{{ case.property }}_{{ case.func_name }}(solution_script):
 	var args = {{ case.given | quote }}
-	var expected = {{ case.expected | quote }}
+	var want = {{ case.expected | quote }}
 	var got = solution_script.is_{{ case.property }}(args)
-	return [got, expected]
+	return [got, want, "is_{{ case.property }}(%s) = %s, expected %s" % [args, got, want]]
 
 {% endfor %}

@@ -4,7 +4,7 @@ func test_{{ case.func_name }}(solution_script):
 	var list_one = {{ case.input.listOne | quote }}
 	var list_two = {{ case.input.listTwo | quote }}
 	var got = solution_script.{{ case.property }}(list_one, list_two)
-	return [got, want]
+	return [got, want, "{{ case.property }}(%s, %s) = %s, expected %s" % [list_one, list_two, got, want]]
 
 {% endfor %}
 
