@@ -2,7 +2,8 @@
 func test_{{ case.func_name }}(solution_script):
 	var x = {{ case.input.x }}
 	var y = {{ case.input.y }}
-	var expected = {{ case.expected }}
-	return [solution_script.score(x, y), expected]
+	var want = {{ case.expected }}
+	var got = solution_script.score(x, y)
+	return [got, want, "score(%d, %d) = %s, expected %s" % [x, y, got, want]]
 
 {% endfor %}

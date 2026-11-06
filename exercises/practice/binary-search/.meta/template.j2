@@ -6,6 +6,6 @@ func test_{{ case.func_name }}(solution_script):
 	{%- else %}
 	var want = {{ case.expected }}
 	{%- endif %}
-	return [got, want]
+	return [got, want, "find(%s, %d) = %s, expected %s" % [{{ case.input.array }}, {{ case.input.value }}, got, want]]
 
 {% endfor %}
