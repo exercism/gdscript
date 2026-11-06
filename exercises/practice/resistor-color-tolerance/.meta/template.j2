@@ -2,11 +2,11 @@
 func test_{{ case.func_name }}(solution_script):
 	var colors = {{ case.input.colors | quote }}
 {%- if case.expected.tolerance %}
-	var expected = "{{ case.expected.value }} {{ case.expected.unit }} {{ case.expected.tolerance }}"
+	var want = "{{ case.expected.value }} {{ case.expected.unit }} {{ case.expected.tolerance }}"
 {%- else %}
-	var expected = "{{ case.expected.value }} {{ case.expected.unit }}"
+	var want = "{{ case.expected.value }} {{ case.expected.unit }}"
 {%- endif %}
 	var got = solution_script.{{ case.property | camel_to_snake }}(colors)
-	return [got, expected, "{{ case.property | camel_to_snake }}(%s) = %s, expected %s" % [colors, got, want]]
+	return [got, want, "{{ case.property | camel_to_snake }}(%s) = %s, expected %s" % [colors, got, want]]
 
 {% endfor %}
