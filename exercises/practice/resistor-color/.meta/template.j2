@@ -1,10 +1,13 @@
 {% for case in cases %}
 func test_{{ case.func_name }}(solution_script):
 {%- if case.property == "colorCode" %}
-	return [solution_script.{{ case.property | camel_to_snake }}({{ case.input.color | quote }}), {{ case.expected }}]
+	var want = {{ case.expected }}
+	var got = solution_script.{{ case.property | camel_to_snake }}({{ case.input.color | quote }})
+	return [got, want, "{{ case.property | camel_to_snake }}(%s) = %s, expected %s" % [{{ case.input.color | quote }}, got, want]]
 
 {%- elif case.property == "colors" %}
-	var colors = {{ case.expected | quote }}
-	return [solution_script.{{ case.property }}(), colors]
+	var want = {{ case.expected | quote }}
+	var got = solution_script.{{ case.property }}()
+	return [got, want, "{{ case.property }}() = %s, expected %s" % [got, want]]
 {%- endif %}
 {% endfor %}
