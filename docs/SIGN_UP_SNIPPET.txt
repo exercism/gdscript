@@ -1,0 +1,8 @@
+func most_common_word(text: String) -> String:
+	var counts := {}
+	var best := ""
+	for word in text.to_lower().split(" "):
+		counts[word] = counts.get(word, 0) + 1
+		if counts[word] > counts.get(best, 0):
+			best = word
+	return "\"%s\" appears %d times" % [best, counts[best]]
