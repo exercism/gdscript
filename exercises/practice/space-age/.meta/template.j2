@@ -7,10 +7,10 @@ func test_{{ case.func_name }}(solution_script):
 	var got = solution_script.on_planet({{ case.input.planet | quote }}, {{ case.input.seconds }})
 {%- if not case.expect_error %}
 	var want = {{ case.expected }}
-	return [_round(got), _round(want)]
+	return [_round(got), _round(want), "on_planet(%s, %s) = %s, expected around %s" % [{{ case.input.planet | quote }}, {{ case.input.seconds }}, got, _round(want)]]
 {%- else %}
 	var want = null
-	return [got, want]
+	return [got, want, "on_planet(%s, %s) = %s, expected %s" % [{{ case.input.planet | quote }}, {{ case.input.seconds }}, got, want]]
 {%- endif %}
 
 {% endfor %}
