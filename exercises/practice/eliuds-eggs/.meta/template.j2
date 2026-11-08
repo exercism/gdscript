@@ -2,7 +2,7 @@
 func test_{{ case.func_name }}(solution_script):
 	var got = solution_script.egg_count({{ case.given }})
 	var want = {{ case.expected }}
-	return [got, want]
+	return [got, want, "egg_count(%d) = %s, expected %d" % [{{ case.given }}, got, want]]
 
 {% endfor %}
 

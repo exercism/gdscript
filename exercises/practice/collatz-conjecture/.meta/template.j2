@@ -6,7 +6,7 @@ func test_{{ case.func_name }}(solution_script):
 {%- else %}
 	var want = ERR_INVALID_PARAMETER
 {%- endif %}
-	return [got, want]
+	return [got, want, "{{ case.property }}(%d) = %s, expected %s" % [{{ case.input.number }}, got, want]]
 
 {% endfor %}
 
