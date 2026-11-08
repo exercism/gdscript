@@ -1,8 +1,8 @@
 {% for case in cases %}
 func test_{{ case.func_name }}(solution_script):
-	var got = solution_script.is_isogram("{{ case.given }}")
+	var got = solution_script.is_isogram({{ case.given | quote }})
 	var want = {{ case.expected | quote }}
-	return [got, want]
+	return [got, want, "is_isogram(%s) = %s, expected %s" % [{{ case.given | quote }}, got, want]]
 
 {% endfor %}
 

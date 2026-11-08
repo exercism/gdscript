@@ -5,10 +5,11 @@ func test_{{ case.func_name }}(solution_script):
 	var got = solution_script.{{ case.property }}(strand1, strand2)
 {%- if not case.expect_error %}
 	var want = {{ case.expected }}
+	return [got, want, "{{ case.property }}(%s, %s) = %s, expected %d" % [strand1, strand2, got, want]]
 {%- else %}
 	var want = ERR_INVALID_PARAMETER
+	return [got, want, "{{ case.property }}(%s, %s) = %s, expected %d" % [strand1, strand2, got, ERR_INVALID_PARAMETER]]
 {%- endif %}
-	return [got, want]
 
 {% endfor %}
 
