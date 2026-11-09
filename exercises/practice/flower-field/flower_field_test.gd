@@ -3,7 +3,7 @@ func test_no_rows(solution_script):
 	])
 	var want = [
 	]
-	return [got, want]
+	return [got, want, "annotate(%s) = %s, expected %s" % [[], got, want]]
 
 
 func test_no_columns(solution_script):
@@ -13,7 +13,7 @@ func test_no_columns(solution_script):
 	var want = [
 		"",
 	]
-	return [got, want]
+	return [got, want, "annotate(%s) = %s, expected %s" % [[""], got, want]]
 
 
 func test_no_flowers(solution_script):
@@ -27,7 +27,7 @@ func test_no_flowers(solution_script):
 		"   ",
 		"   ",
 	]
-	return [got, want]
+	return [got, want, "annotate(%s) = %s, expected %s" % [["   ", "   ", "   "], got, want]]
 
 
 func test_garden_full_of_flowers(solution_script):
@@ -41,7 +41,7 @@ func test_garden_full_of_flowers(solution_script):
 		"***",
 		"***",
 	]
-	return [got, want]
+	return [got, want, "annotate(%s) = %s, expected %s" % [["***", "***", "***"], got, want]]
 
 
 func test_flower_surrounded_by_spaces(solution_script):
@@ -55,7 +55,7 @@ func test_flower_surrounded_by_spaces(solution_script):
 		"1*1",
 		"111",
 	]
-	return [got, want]
+	return [got, want, "annotate(%s) = %s, expected %s" % [["   ", " * ", "   "], got, want]]
 
 
 func test_space_surrounded_by_flowers(solution_script):
@@ -69,7 +69,7 @@ func test_space_surrounded_by_flowers(solution_script):
 		"*8*",
 		"***",
 	]
-	return [got, want]
+	return [got, want, "annotate(%s) = %s, expected %s" % [["***", "* *", "***"], got, want]]
 
 
 func test_horizontal_line(solution_script):
@@ -79,7 +79,7 @@ func test_horizontal_line(solution_script):
 	var want = [
 		"1*2*1",
 	]
-	return [got, want]
+	return [got, want, "annotate(%s) = %s, expected %s" % [[" * * "], got, want]]
 
 
 func test_horizontal_line_flowers_at_edges(solution_script):
@@ -89,7 +89,7 @@ func test_horizontal_line_flowers_at_edges(solution_script):
 	var want = [
 		"*1 1*",
 	]
-	return [got, want]
+	return [got, want, "annotate(%s) = %s, expected %s" % [["*   *"], got, want]]
 
 
 func test_vertical_line(solution_script):
@@ -107,7 +107,7 @@ func test_vertical_line(solution_script):
 		"*",
 		"1",
 	]
-	return [got, want]
+	return [got, want, "annotate(%s) = %s, expected %s" % [[" ", "*", " ", "*", " "], got, want]]
 
 
 func test_vertical_line_flowers_at_edges(solution_script):
@@ -125,7 +125,7 @@ func test_vertical_line_flowers_at_edges(solution_script):
 		"1",
 		"*",
 	]
-	return [got, want]
+	return [got, want, "annotate(%s) = %s, expected %s" % [["*", " ", " ", " ", "*"], got, want]]
 
 
 func test_cross(solution_script):
@@ -143,7 +143,7 @@ func test_cross(solution_script):
 		"25*52",
 		" 2*2 ",
 	]
-	return [got, want]
+	return [got, want, "annotate(%s) = %s, expected %s" % [["  *  ", "  *  ", "*****", "  *  ", "  *  "], got, want]]
 
 
 func test_large_garden(solution_script):
@@ -163,7 +163,7 @@ func test_large_garden(solution_script):
 		"1*22*2",
 		"111111",
 	]
-	return [got, want]
+	return [got, want, "annotate(%s) = %s, expected %s" % [[" *  * ", "  *   ", "    * ", "   * *", " *  * ", "      "], got, want]]
 
 
 func test_multiple_adjacent_flowers(solution_script):
@@ -173,4 +173,4 @@ func test_multiple_adjacent_flowers(solution_script):
 	var want = [
 		"1**1",
 	]
-	return [got, want]
+	return [got, want, "annotate(%s) = %s, expected %s" % [[" ** "], got, want]]
