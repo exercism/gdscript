@@ -3,9 +3,10 @@ func test_{{ case.func_name }}(solution_script):
 	var inputs = { {%- for key, val in case.given.items() %}
 		{{ key }}: {{ val | quote }},{% endfor %}
 	}
-	var expected = { {%- for key, val in case.expected.items() %}
+	var want = { {%- for key, val in case.expected.items() %}
 		{{ key | quote }}: {{ val | quote }},{% endfor %}
 	}
-	return [solution_script.{{ case.property | camel_to_snake }}(inputs), expected]
+	var got = solution_script.{{ case.property | camel_to_snake }}(inputs)
+	return [got, want, "{{ case.property | camel_to_snake }}(%s) = %s, expected %s" % [inputs, got, want]]
 
 {% endfor %}

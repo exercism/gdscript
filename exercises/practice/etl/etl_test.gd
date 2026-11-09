@@ -2,24 +2,26 @@ func test_single_letter(solution_script):
 	var inputs = {
 		1: ["A"],
 	}
-	var expected = {
+	var want = {
 		"a": 1,
 	}
-	return [solution_script.transform(inputs), expected]
+	var got = solution_script.transform(inputs)
+	return [got, want, "transform(%s) = %s, expected %s" % [inputs, got, want]]
 
 
 func test_single_score_with_multiple_letters(solution_script):
 	var inputs = {
 		1: ["A", "E", "I", "O", "U"],
 	}
-	var expected = {
+	var want = {
 		"a": 1,
 		"e": 1,
 		"i": 1,
 		"o": 1,
 		"u": 1,
 	}
-	return [solution_script.transform(inputs), expected]
+	var got = solution_script.transform(inputs)
+	return [got, want, "transform(%s) = %s, expected %s" % [inputs, got, want]]
 
 
 func test_multiple_scores_with_multiple_letters(solution_script):
@@ -27,13 +29,14 @@ func test_multiple_scores_with_multiple_letters(solution_script):
 		1: ["A", "E"],
 		2: ["D", "G"],
 	}
-	var expected = {
+	var want = {
 		"a": 1,
 		"d": 2,
 		"e": 1,
 		"g": 2,
 	}
-	return [solution_script.transform(inputs), expected]
+	var got = solution_script.transform(inputs)
+	return [got, want, "transform(%s) = %s, expected %s" % [inputs, got, want]]
 
 
 func test_multiple_scores_with_differing_numbers_of_letters(solution_script):
@@ -46,7 +49,7 @@ func test_multiple_scores_with_differing_numbers_of_letters(solution_script):
 		8: ["J", "X"],
 		10: ["Q", "Z"],
 	}
-	var expected = {
+	var want = {
 		"a": 1,
 		"b": 3,
 		"c": 3,
@@ -74,4 +77,5 @@ func test_multiple_scores_with_differing_numbers_of_letters(solution_script):
 		"y": 4,
 		"z": 10,
 	}
-	return [solution_script.transform(inputs), expected]
+	var got = solution_script.transform(inputs)
+	return [got, want, "transform(%s) = %s, expected %s" % [inputs, got, want]]
