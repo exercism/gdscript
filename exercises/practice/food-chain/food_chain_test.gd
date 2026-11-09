@@ -3,7 +3,7 @@ func test_fly(solution_script):
 I know an old lady who swallowed a fly.
 I don't know why she swallowed the fly. Perhaps she'll die."""
 	var got = solution_script.recite(1, 1)
-	return [got, want]
+	return [got, want, "recite(%d, %d) = %s, expected %s" % [1, 1, got, want]]
 
 
 func test_spider(solution_script):
@@ -13,7 +13,7 @@ It wriggled and jiggled and tickled inside her.
 She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die."""
 	var got = solution_script.recite(2, 2)
-	return [got, want]
+	return [got, want, "recite(%d, %d) = %s, expected %s" % [2, 2, got, want]]
 
 
 func test_bird(solution_script):
@@ -24,7 +24,7 @@ She swallowed the bird to catch the spider that wriggled and jiggled and tickled
 She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die."""
 	var got = solution_script.recite(3, 3)
-	return [got, want]
+	return [got, want, "recite(%d, %d) = %s, expected %s" % [3, 3, got, want]]
 
 
 func test_cat(solution_script):
@@ -36,7 +36,7 @@ She swallowed the bird to catch the spider that wriggled and jiggled and tickled
 She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die."""
 	var got = solution_script.recite(4, 4)
-	return [got, want]
+	return [got, want, "recite(%d, %d) = %s, expected %s" % [4, 4, got, want]]
 
 
 func test_dog(solution_script):
@@ -49,7 +49,7 @@ She swallowed the bird to catch the spider that wriggled and jiggled and tickled
 She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die."""
 	var got = solution_script.recite(5, 5)
-	return [got, want]
+	return [got, want, "recite(%d, %d) = %s, expected %s" % [5, 5, got, want]]
 
 
 func test_goat(solution_script):
@@ -63,7 +63,7 @@ She swallowed the bird to catch the spider that wriggled and jiggled and tickled
 She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die."""
 	var got = solution_script.recite(6, 6)
-	return [got, want]
+	return [got, want, "recite(%d, %d) = %s, expected %s" % [6, 6, got, want]]
 
 
 func test_cow(solution_script):
@@ -78,7 +78,7 @@ She swallowed the bird to catch the spider that wriggled and jiggled and tickled
 She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die."""
 	var got = solution_script.recite(7, 7)
-	return [got, want]
+	return [got, want, "recite(%d, %d) = %s, expected %s" % [7, 7, got, want]]
 
 
 func test_horse(solution_script):
@@ -86,7 +86,7 @@ func test_horse(solution_script):
 I know an old lady who swallowed a horse.
 She's dead, of course!"""
 	var got = solution_script.recite(8, 8)
-	return [got, want]
+	return [got, want, "recite(%d, %d) = %s, expected %s" % [8, 8, got, want]]
 
 
 func test_multiple_verses(solution_script):
@@ -105,7 +105,7 @@ She swallowed the bird to catch the spider that wriggled and jiggled and tickled
 She swallowed the spider to catch the fly.
 I don't know why she swallowed the fly. Perhaps she'll die."""
 	var got = solution_script.recite(1, 3)
-	return [got, want]
+	return [got, want, "recite(%d, %d) = %s, expected %s" % [1, 3, got, want]]
 
 
 func test_full_song(solution_script):
@@ -161,4 +161,4 @@ I don't know why she swallowed the fly. Perhaps she'll die.
 I know an old lady who swallowed a horse.
 She's dead, of course!"""
 	var got = solution_script.recite(1, 8)
-	return [got, want]
+	return [got, want, "recite(%d, %d) = %s, expected %s" % [1, 8, got, want]]

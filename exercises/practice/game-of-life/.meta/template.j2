@@ -6,7 +6,8 @@ func test_{{ case.func_name }}(solution_script):
 	var want = [{% for row in case.expected %}
 		{{ row | quote }},{% endfor %}
 	]
-	return [solution_script.{{ case.property | camel_to_snake }}(initial), want]
+	var got = solution_script.{{ case.property | camel_to_snake }}(initial)
+	return [got, want, "{{ case.property | camel_to_snake }}(%s) = %s, expected %s" % [initial, got, want]]
 
 {% endfor %}
 
