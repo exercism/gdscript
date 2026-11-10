@@ -11,7 +11,7 @@ func test_random_key_cipher_can_decode(solution_script):
 	var want = "aaaaaaaaaa"
 	var key = cipher.key.substr(0, len(want))
 	var got = cipher.decode(key)
-	return [got, want, "decoding the key prefix, %s: cipher.decode(%s) = %s, expected %s, %s" % [key, plaintext, got, want]]
+	return [got, want, "decoding with key prefix, %s: cipher.decode(%s) = %s, expected %s" % [key, key, got, want]]
 
 
 func test_key_is_made_only_of_lowercase_letters(solution_script):
