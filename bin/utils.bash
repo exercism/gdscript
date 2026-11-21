@@ -65,6 +65,8 @@ write_project_file() {
         printf '[application]\n'
         printf 'config/name="Exercism - %s"\n' "$name"
         printf 'config/features=PackedStringArray("4.7")\n'
+        printf '[debug]\n'
+        printf 'file_logging/enable_file_logging.pc=false\n'
     } > "${exercise}/project.godot"
 }
 
